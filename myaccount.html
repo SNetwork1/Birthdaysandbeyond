@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthdays and Beyond</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS only -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/mega-menu.css" />
+
+
+    <link rel = "icon" href ="img/birthday-card.png" type = "image/x-icon"> 
+
+</head>
+  <style type="text/css">
+  .nav li a {
+  color: black;
+  }
+  form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+  }
+  /* Style the submit button */
+  form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #F7F7F7;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  }
+  form.example button:hover {
+  background: #0b7dda;
+  }
+  /* Clear floats */
+  form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  .notification {
+  position: relative;
+  display: inline-block;
+  }
+  .notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  }
+  .myNav_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  }
+  .myNav_li {
+  float: left;
+  }
+  .myNav_li a {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FE69B4;
+  text-align: center;
+  padding: 14px 16px;
+  margin-right: 20px;
+  text-decoration: none;
+  }
+  .fa1 {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  }
+  .fa1:hover {
+  opacity: 0.7;
+  }
+  #pageTitle {
+   /*width: 100%; */
+   padding-top: 30px;
+   text-align: center; 
+   border-bottom: 3px solid #ff66d9; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+   color: #ff66d9;
+   margin-left: 50px;
+   margin-right: 50px;
+  } 
+
+  #pageTitle span { 
+      font-size: 24px;
+      background:white; 
+      /*#f8f9fa*/
+      padding:0 20px; 
+  }
+
+  #msgDiv{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #msgBox{
+
+    width: 400px;
+    text-align: center;
+    background-color: #29AAE1;
+    border:2px solid #ff66d9;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ff66d9;
+
+  }
+  .account-link-div{
+    display: flex;align-items: center;justify-content: center;
+  }
+  .account-link{
+    width: 50%;background-color: #ff66d9;color: white;font-weight: bold;font-size: 14px;
+  } 
+  .account-link-text{
+     padding: 15px;font-size: 12px;
+  }
+  </style>
+  <body style="background-color: #F7F7F7;">
+    <!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #FFC1E1">
+
+
+        <div  class= "container-fluid">
+        
+          <div class = "text-center" style="color: white;"><h1>Welcome to Birthdays and Beyond!</h1>
+          
+          </div>
+          
+      
+          <div class="container">
+            <div  class= "item">
+            <ul class="navbar navbar-expand-lg navbar-light">
+     
+            
+            <a button type="button" class="btn btn-secondary btn-lg">Store</a>
+            <a button type="button" class="btn btn-secondary btn-lg">Newsletter</a>
+            <a button type="button" class="btn btn-secondary btn-lg">FAQs</a>
+            
+            <div class="btn-group">
+              <a button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ENG
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Language 1</a>
+                <a class="dropdown-item" href="#">Language 2</a>
+              </div>  
+            <div class="btn-group">
+              <a button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                USD
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Currency 1</a>
+                <a class="dropdown-item" href="#">Currency 2</a>
+              </div>
+              </div>
+         </div>
+        </ul> 
+        </div>
+      </div>  
+
+      <div class= "item">
+        <a href="account-signup.php" style="color: black; padding-left: 50px;">
+        <i class="fas fa-user " style="font-size:30px; "></i>
+        <div class= "text-center" style="color: black; padding-left: 50px">
+        <br><b>Account</b><br>Login/Join</div> </a>
+     
+      </div>  
+      <div class= "item">
+        <a href="#" style="color: black; padding-left: 50px; ">
+          <i class="fas fa-shopping-cart" style="font-size:30px;">
+          </i>
+        <div style="color: black; padding-left: 50px">
+        <br> <b>Cart</b> <br>35.20$</div>
+      </a>
+     </div>
+    
+    </div>
+</nav>
+
+
+  <!--
+  <div class="container">
+
+      <a class = "align-middle" href="#">
+        <img src="img/logo1.jpg" class="img-fluid" alt="Responsive image">
+      </a>-->    
+      
+      <!-- Search form
+      <form class="example">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+                           -->       
+    
+    
+                                <!---Menu Bar Starts--->
+  
+    <div class="container-1">
+   <!--  <a class = "navbar-brand" href="index.html">
+        <img src="img/Logo B&B.png" width="170" height="50" class="d-inline-block align-top" alt="">
+      </a>-->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #f6c0e0">
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto justify-content-end ">
+          <div class="container">
+          <li class="nav-item active">
+          
+            <a class = "navbar-brand-lg" href="index.html">
+              <img src="img/bb-logo.jpeg" width="80" height="60" class="inline align-top" styles="top:80;" alt="">
+            </a>
+          
+                                      <!--- Home
+            <a class="btn btn-light" class="text-white bg-dark" style = "background-color: #ff66d9;" href="index.html" type="button" aria-haspopup="true" aria-expanded="false" >Home</a>
+          </li> --->
+
+                                     <!--   Cards   -->
+      
+          <li class="nav-item dropdown">
+          <a class="btn btn-light btn-lg dropdown-toggle" href="cards.html" style = "background-color: #ff66d9;" role="button" id="dropdownMenuLink"  data-toggle="dropdown" aria-haspopup="true">
+            Cards
+          </a>
+          
+          <div class="dropdown-menu mega-menu" aria-labelledby="dropdownMenuLink">
+         <div class="row">
+          <div class= "col-md-3">
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Popular</b></a>
+          <div class="dropdown-divider"></div> 
+
+          <a class="dropdown-item"href="">Anniversary</a>    
+          <a class="dropdown-item"href="">Bestsellers</a>
+          <a class="dropdown-item"href="">Birthday Cards</a>
+          <a class="dropdown-item"href="">Engagements</a>
+          <a class="dropdown-item"href="">Giant Cards</a>
+          <a class="dropdown-item"href="">Leaving</a>
+          <a class="dropdown-item"href="">New in Cards</a>
+          <a class="dropdown-item"href="">Wedding</a>
+            
+      <---
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Seasonal</b></a>
+          <div class="dropdown-divider"></div> 
+
+          <a class="dropdown-item"href="">Christmas</a>
+          <a class="dropdown-item"href="">Easter</a>
+          <a class="dropdown-item"href="">Father's Day</a>
+          <a class="dropdown-item"href="">Mother's Day</a>
+          <a class="dropdown-item"href="">Valantine's Day</a>
+        
+       
+     
+        </div>
+        <div class= "col-md-3">
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Congrats/Goodluck</b></a>
+          <div class="dropdown-divider"></div> 
+            
+          <a class="dropdown-item"href="">All Congratulations</a>
+          <a class="dropdown-item"href="">Good Luck</a>
+          <a class="dropdown-item"href="">Graduation</a>
+          <a class="dropdown-item"href="">New Job</a>
+          <a class="dropdown-item"href="">Retirement</a>
+
+      
+          
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Baby</b></a>
+          <div class="dropdown-divider"></div> 
+            
+            
+          <a class="dropdown-item"href="">Announcement</a>
+          <a class="dropdown-item"href="">Baby Shower</a>
+          <a class="dropdown-item"href="">New Baby</a>
+          <a class="dropdown-item"href="">Pregnancy</a>
+        </div>
+        <div class= "col-md-2">
+        <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Baby</b></a>
+          <div class="dropdown-divider"></div> 
+            
+            
+          <a class="dropdown-item"href="">Announcement</a>
+          <a class="dropdown-item"href="">Baby Shower</a>
+          <a class="dropdown-item"href="">New Baby</a>
+          <a class="dropdown-item"href="">Pregnancy</a>
+
+          
+        
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><b>Baby</b></a>
+            <div class="dropdown-divider"></div> 
+              
+              
+            <a class="dropdown-item"href="">Announcement</a>
+            <a class="dropdown-item"href="">Baby Shower</a>
+            <a class="dropdown-item"href="">New Baby</a>
+            <a class="dropdown-item"href="">Pregnancy</a>
+  
+          </div>
+          <div class= "col-md-1">
+          <img src="img/card.jpg" width="240px" height="400px"  alt="">
+
+          </div>
+
+          <!--Birthday Cards-->
+       
+        <li class="nav-item dropdown">
+            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Birthday Cards
+            </a>
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+              <div class="row">
+                <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Him</b></a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"href="">Boyfriend</a>
+              <a class="dropdown-item"href="">Brother</a>
+              <a class="dropdown-item" href="">Dad</a>
+              <a class="dropdown-item" href="">Grandad</a>
+              <a class="dropdown-item" href="">Husband</a>
+              <a class="dropdown-item" href="">Son</a>
+              
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Her</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="">Daughter</a>
+              <a class="dropdown-item" href="">Girlfriend</a>
+              <a class="dropdown-item" href="">Granma</a>
+              <a class="dropdown-item" href="">Mum</a>
+              <a class="dropdown-item" href="">Sister</a>
+              <a class="dropdown-item" href="">Wife</a>
+          </div>
+
+          <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Kids</b></a>
+              <div class="dropdown-divider"></div>
+          
+              <a class="dropdown-item"  href="#">Boy</a>
+              <a class="dropdown-item" href="">Girl</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Age</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="">1st Birthday</a>
+              <a class="dropdown-item" href="">18th Birthday</a>
+              <a class="dropdown-item" href="">21st Birthday</a>
+              <a class="dropdown-item" href="">30th  Birthday</a>
+              <a class="dropdown-item" href="">40th Birthday</a>
+              <a class="dropdown-item" href="">50th Birthday</a>
+              <a class="dropdown-item" href="">60th Birthday</a>
+              <a class="dropdown-item" href="">65th Birthday</a>
+              <a class="dropdown-item" href="">70th Birthday</a>
+              <a class="dropdown-item" href="">80th Birthday</a>
+              <a class="dropdown-item" href="">All Ages</a>
+</div>
+
+          <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Styles</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="">Chocolate Cards</a>
+              <a class="dropdown-item" href="">Create Your Own</a>
+              <a class="dropdown-item" href="">Funny</a>
+              <a class="dropdown-item" href="">Non Photo</a>
+              <a class="dropdown-item" href="">Photo</a>
+              <a class="dropdown-item" href="">Photo Collage</a>
+              <a class="dropdown-item" href="">Rude</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Populars</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="">All Birthday</a>
+              <a class="dropdown-item" href="">Best Seller</a>
+              <a class="dropdown-item" href="">Friends</a>
+              <a class="dropdown-item" href="">New in</a>                
+            </div>
+         
+</div>
+
+                            <!--   Post Cards        -->
+                 
+            <li class="nav-item dropdown">
+            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Postcards
+            </a>
+            </a>
+           
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+              <div class="row">
+                <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>I'm Looking for</b></a>
+              <div class="dropdown-divider"></div>
+           
+              <a class="dropdown-item" href="#">All Postcards</a>
+              <a class="dropdown-item" href="#">Birthday Postcards</a>
+              <a class="dropdown-item" href="#">Father's Day POstcards</a>
+              <a class="dropdown-item" href="#">General Black Postcards</a>
+              <a class="dropdown-item" href="#">New Baby Postcards</a>
+              <a class="dropdown-item" href="#">Wedding Postcards</a>
+              <a class="dropdown-item" href="#">Thank you Postcards</a>
+                </div>
+                <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Who is for?</b></a>
+              <div class="dropdown-divider"></div>
+           
+              <a class="dropdown-item" href="#">From Couples</a>
+              <a class="dropdown-item" href="#">From Families</a>
+              <a class="dropdown-item" href="#">From Him</a>
+              <a class="dropdown-item" href="#">From Her</a>
+              <a class="dropdown-item" href="#">From Kids</a>
+           </div>
+           <div class= "col-md-3">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Postcards by Type</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Non Photo Postcards</a>
+              <a class="dropdown-item" href="#">Photo Postcards</a>
+           </div>
+
+</div>
+      
+                            <!-- Personalized Gifts -->
+          
+         <li class="nav-item dropdown">
+            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Personalized Gifts
+            </a>
+            </a>
+         
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+              <div class="row">
+                <div class= "col-md-3">
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>I'm Looking For..</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Alcohol</a>
+              <a class="dropdown-item" href="#">Aprons</a>
+              <a class="dropdown-item" href="#">Backpacks</a>
+              <a class="dropdown-item" href="#">Balloons</a>
+              <a class="dropdown-item" href="#">Books</a>
+              <a class="dropdown-item" href="#">Calanders</a>
+              <a class="dropdown-item" href="#">Canvas Prints</a>
+              <a class="dropdown-item" href="#">Coasters</a>
+                </div>
+                <div class= "col-md-3">
+              <a class="dropdown-item" href="#">Cushions</a>
+              <a class="dropdown-item" href="#">Diaries</a>
+              <a class="dropdown-item" href="#">Engraved Frames</a>
+              <a class="dropdown-item" href="#">Glassware</a>
+              <a class="dropdown-item" href="#">Keyrings</a>
+              <a class="dropdown-item" href="#">Mugs</a>
+              <a class="dropdown-item" href="#">Notebooks</a>
+              <a class="dropdown-item" href="#">Pens</a>
+              <a class="dropdown-item" href="#">Photo Blocks</a>
+            </div>  <div class= "col-md-3">
+              <a class="dropdown-item" href="#">Poster</a>
+              <a class="dropdown-item" href="#">Socks</a>
+              <a class="dropdown-item" href="#">T-shirts</a>
+              <a class="dropdown-item" href="#">Wall Art</a>
+              <a class="dropdown-item" href="#">Water Bottles</a>
+              <a class="dropdown-item" href="#">Wedding Stationary</a>
+            </div>
+            </div>
+          </li>
+           
+            
+
+
+          <li class="nav-item dropdown">
+            <a class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+             Flowers
+            </a>
+            </a>
+            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+           
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Occassions</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Birthday</a>
+
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Themes</b></a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Under $30</a>
+            
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><b>Type</b></a>
+              <div class="dropdown-divider"></div>
+
+              
+              <a class="dropdown-item" href="#">Letterbox Flowers</a>
+
+            </div>
+          </li>
+        </ul>
+        
+        <form class="form-inline my-2 my-lg-0">
+          <div class="container">
+          <input class="form-control input" class="h-auto d-inline-block" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary btn-group-lg" type="submit">Search</button></div>
+        </form>
+     
+       </div>
+      </div>
+    </nav>
+
+  </div>
+  <!-- Header -->
+<div style="background-image: url('gift.jpeg');">
+   <div class="container" style="padding-bottom: 40px;">
+     
+    <h1 id="pageTitle"><span>My Account</span></h1>
+
+    <div id="msgDiv">
+      
+      <div id="msgBox">
+        
+        <p style="padding: 20px;font-weight: bold;line-height: 25px;">One of the things I love about this solution is that it works for situations where you don't know what color the background is. Easily the best solution so far for this problem.</p>
+
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="row" style="padding-top:15px;">
+        <div class="col-md-6">
+          <div class="account-link-div" style="">
+            <a href="" class="btn account-link" style="">My Contact Details</a>
+          </div>
+          <center><p class="account-link-text">Change your personal details & preferences</p></center>
+        </div>
+        <div class="col-md-6">
+          <div class="account-link-div">
+            <a href="" class="btn account-link">My Address Book</a>
+          </div>
+          <center><p class="account-link-text">View & edit your saved addresses and see which card you sent where</p></center>
+        </div>
+    </div>
+    <div class="row" style="padding-top:15px;">
+        <div class="col-md-6">
+          <div class="account-link-div">
+            <a href="" class="btn account-link">My Order History</a>
+          </div>
+          <center><p class="account-link-text">See all your orders, past and present </p></center>
+        </div>
+        <div class="col-md-6">
+          <div class="account-link-div">
+            <a href="" class="btn account-link">My Family & Friends</a>
+          </div>
+          <center><p class="account-link-text">View, edit and add your reminders to never forget and occasion again.</p></center>
+        </div>
+    </div>
+    <div class="row" style="padding-top:15px;">
+        <div class="col-md-6">
+          <div class="account-link-div">
+            <a href="" class="btn account-link">My Saved Payment Cards</a>
+          </div>
+          <center><p class="account-link-text">View & Manage your saved payments card</p></center>
+        </div>
+        <div class="col-md-6">
+          <div class="account-link-div">
+            <a href="" class="btn account-link">My Signatures</a>
+          </div>
+          <center><p class="account-link-text">Upload & view your own signature, sign-off and doddle</p></center>
+        </div>
+    </div>
+   </div> 
+</div>
+
+
+
+
+  <!--Footer-->      
+ <footer style="padding-top: 20px;">
+    <div class="container">
+      <div class="row">
+        <div class="region_setion col-md-3">
+          <h3 style="font-weight: bold; color: black; ">Your Region</h3>
+          <ul class="ul-lis">
+            <li><a href="#" style="color: #ff66d9; font-weight: bold;">UK</a></li>
+            <li><a href="#" style="color: #ff66d9; font-weight: bold;">USA</a></li>
+            <li><a href="#" style="color: #ff66d9; font-weight: bold;">CANADA</a></li>
+          </ul>
+        </div>
+        <div class="helpful_links col-md-3">
+          <h3 style="font-weight: bold; color: black;">Helpful Link</h3>
+          <ul class="ul-lis">
+            <li><a href="#" style="font-weight: bold;">FAQs</a></li>
+            <li><a href="#" style="font-weight: bold;">Sing In</a></li>
+            <li><a href="#" style="font-weight: bold;">Create an Account</a></li>
+            <li><a href="#" style="font-weight: bold;">Prepay</a></li>
+            <li><a href="#" style="font-weight: bold;">Customer Services</a></li>
+          </ul>
+        </div>
+        <div class="about-us col-md-3">
+          <h3 style="font-weight: bold; color: black;">About Us</h3>
+          <ul class="ul-lis">
+            <li><a href="#" style="font-weight: bold;">Contact Us</a></li>
+            <li><a href="#" style="font-weight: bold;">Feedback</a></li>
+            <li><a href="#" style="font-weight: bold;">Cookies</a></li>
+            <li><a href="#" style="font-weight: bold;">Terms of Use</a></li>
+            <li><a href="#" style="font-weight: bold;">Privacy notice</a></li>
+          </ul>
+        </div>
+        <div class="payment-method-section col-md-3">
+          <h3 style="font-weight: bold; color:black; ">Payment Methods</h3>
+          <div class="payment-imgs">
+           <a href="#"> <img src="img/visa.png" alt="visa-pay" /></a>
+            <a href="#"><img src="img/mastercard.png" alt="visa-pay" /></a>
+          </div>
+          <div class="payment-imgs">
+            <a href="#"><img src="img/maestro.png" alt="visa-pay" /></a>
+            <a href="#"><img src="img/ipay.png" alt="visa-pay" /></a>
+          </div>
+  
+          <div class="keepintouch">
+            <h3 style="font-weight: bold; color: black;">Keep in Touch</h3>
+            <a href="#" class="fab fa-facebook" style="font-size:30px;" ></a> 
+            <a href="#" class="fa fa1 fa-instagram"></a>
+            <a href="#" class="fa fa1 fa-google"></a>
+            <a href="#" class="fa fa1 fa-youtube"></a>
+          </div>
+  
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="pink-line"></div>
+  </div>
+    <!-- Footer -->
+  </div>
+  </body>
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/69b29b2f79.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="js/dropdown.js"></script>
+  </html>

@@ -1,0 +1,104 @@
+footer {
+  background: #e4e5e7 !important;
+  padding: 20px;
+}
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: 50px;
+  width: 100%;
+}
+.payment-method-section img {
+  width: 50px;
+}
+
+.title-sec {
+  font-size: 18px;
+}
+
+.ul-lis {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.ul-lis li {
+  list-style: none;
+  font-size: 18px;
+}
+
+.ul-lis li a {
+  color: gray;
+}
+
+.ul-lis li a:hover {
+  text-decoration: none;
+}
+
+.pink-line {
+  height: 60px;
+  width: 100%;
+  background: #f9add3;
+}
+
+.keepintouch ul li {
+  list-style: none;
+  font-size: 18px !important;
+  margin: auto;
+  font-weight: bold;
+}
+
+.fb,
+.ins,
+.gogle,
+.ytube {
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+.fb {
+  padding: 4px 8px;
+}
+
+.ins {
+  padding: 4px 6px;
+}
+
+.gogle {
+  padding: 4px 4px;
+}
+
+.ytube {
+  padding: 4px 6px;
+}
+
+.payment-method-section {
+  text-align: center;
+}
+
+.title-sec {
+  font-weight: bold;
+}
+
+.keepintouch {
+  margin-top: 20px;
+}
+
+.keepintouch ul {
+  margin: 15px 0 0 0 !important;
+}
+
+.region_setion ul li a {
+  color: #dc81ae !important;
+}
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.btn-light {
+  color: #ffffff;
+}

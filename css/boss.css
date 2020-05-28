@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-size: 100%;
+	font-family: arial;
+}
+.clear{clear: both}
+.outer-box{
+	border: 2px solid #633885;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+.top-boxes{
+	border-bottom: 2px solid #633885;
+}
+.top-boxes .small-box{
+	padding: 8px 10px;
+	text-align: center;
+	border-right: 2px solid #633885;
+	font-size: 16px;
+	font-weight: 700;
+}
+.checkbox-container {	
+	position: relative;
+	padding-left: 25px;
+	margin-top: 15px;
+	cursor: pointer;
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: 5px;
+}
+
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: rgb(173, 16, 16);
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+}
+.checkbox-container:hover input ~ .checkmark {
+	opacity: 0.8;
+}
+.checkbox-container input:checked ~ .checkmark {
+	background-color: rgb(233, 0, 0);
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.63);
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkbox-container .checkmark:after {
+	left: 6px;
+	top: 1px;
+	width: 7px;
+	height: 15px;
+	border: solid #633885;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.inner-boxes{
+	padding: 20px;
+	background-color: #e49800;
+}
+.inside-box{
+	padding: 20px 30px;
+	border: 2px solid #633885;
+	border-radius: 5px;
+	background: rgb(253, 0, 0);
+}
+.left-card{
+	height: 280px;
+	margin-bottom: 20px;
+}
+.top-boxes.all-border{
+	border: 2px solid #633885;
+}
+.top-boxes.all-border .small-box{
+	font-size: 12px;
+	padding: 8px 4px; 
+	color: #633885
+}
+.top-boxes.all-border .small-box i{
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+.inside-box h6{
+	text-align: center;
+	font-weight: 700;
+}
+.inside-box h6.bor{
+	padding-bottom: 5px;
+	border-bottom: 2px solid #633885;
+}
+.inside-box strong{
+	font-size: 14px;
+}
+.inside-box a i{
+	font-size: 12px;
+	color: #000;
+}
+.inside-box a i:hover{
+	opacity: 0.8;
+}
+
+ 
+.box {
+  position: relative;
+  background: rgb(228, 4, 4);
+  width: 100%;
+}
+ 
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+ 
+.box-tools {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+ 
+.dropzone-wrapper {
+  border: 2px dashed #91b0b3;
+  color: #92b0b3;
+  position: relative;
+  height: 150px;
+}
+ 
+.dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 40%;
+  top: 50px;
+  font-size: 16px;
+}
+ 
+.dropzone,
+.dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  opacity: 0;
+}
+ 
+.dropzone-wrapper:hover,
+.dropzone-wrapper.dragover {
+  background: #ecf0f5;
+}
+ 
+.preview-zone {
+  text-align: center;
+}
+ 
+.preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.btn-purchase{
+	background: #ff6bb2;
+	border-color: #ff6bb2;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 15px;
+}
+.btn-purchase:hover{
+	color: rgb(240, 0, 0);
+	opacity: 0.8;
+}
+.btn-purchase.bo{
+	background: transparent;
+	color: #333;
+}

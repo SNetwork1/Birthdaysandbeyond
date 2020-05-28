@@ -1,0 +1,195 @@
+.parentClass {
+    position: relative;
+    width: 50%;
+    margin-top: 10%;
+    left: 10%;
+    max-width: 500px;
+}
+
+.parentClass img {
+    width: 50%;
+    height: auto;
+}
+
+.parentClass .btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ff66d9;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 5px grey;
+}
+
+.parentClass .btn:hover {
+    background-color: #FFC1E1;
+}
+
+.nav li a {
+    color: black;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #F7F7F7;
+    color: black;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.notification {
+    position: relative;
+    display: inline-block;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+.myNav_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.myNav_li {
+    float: left;
+}
+
+.myNav_li a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FE69B4;
+    text-align: center;
+    padding: 14px 16px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.fa1 {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa1:hover {
+    opacity: 0.7;
+}
+
+.myhoverclass {
+    background: url("PC.png") no-repeat;
+    width: 100%;
+    height: 300px;
+    background-size: 50%;
+}
+
+.myhoverclass:hover {
+    background: url("PC_hover.png") no-repeat;
+    width: 150%;
+    height: 300px;
+    background-size: 60%;
+}
+
+.hoverimg {
+    background: url("celeb.png") no-repeat;
+    width: 100%;
+    height: 300px;
+    background-size: 50%;
+}
+
+.hoverimg:hover {
+    background: url("celeb_hover.png") no-repeat;
+    width: 150%;
+    height: 300px;
+    background-size: 60%;
+}
+
+.hoverclass {
+    background: url("f_cards.png") no-repeat;
+    width: 100%;
+    height: 300px;
+    background-size: 50%;
+}
+
+.hoverclass:hover {
+    background: url("f_hover.png") no-repeat;
+    width: 150%;
+    height: 300px;
+    background-size: 60%;
+}
+
+.myclass {
+    background: url("v_over.png") no-repeat;
+    /* padding-top: 500px; */
+    width: 100%;
+    height: 300px;
+    background-size: 50%;
+}
+
+.myclass:hover {
+    background: url("v_hover.png") no-repeat;
+    width: 150%;
+    height: 300px;
+    background-size: 60%;
+}
+
+.myproductrow {
+    margin-top: 20px;
+}
+
+.web-bg{
+
+    background: url("img/bg-1.png") no-repeat;
+    background-size: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
