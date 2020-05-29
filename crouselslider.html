@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Thumbnail Carousel</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		h2 {
+			font: bold;
+			border: 2px solid;
+			border-radius: 10px;
+			background-color: #f06e9c;
+			color: white;
+			font-size: 26px;
+			text-align: center;
+			position: relative;
+			margin: 40px 70px;
+			text-transform: uppercase;
+
+		}
+
+		.col-center {
+			margin: 0 auto;
+			float: none !important;
+		}
+
+		.carousel {
+			margin: 30px auto 50px;
+			padding: 0 68px;
+		}
+
+		.carousel .item {
+			text-align: center;
+			overflow: hidden;
+			height: 160px;
+		}
+
+		.carousel .item .img-box {
+			background: #fff;
+			padding: 9px;
+
+		}
+
+		.carousel .item img {
+			margin: 0 auto;
+		}
+
+		.carousel .carousel-control {
+			width: 68px;
+			background: none;
+		}
+
+		.carousel .carousel-control i {
+			font-size: 28px;
+			position: absolute;
+			top: 50%;
+			display: inline-block;
+			margin-top: -15px;
+			z-index: 5;
+			left: 0;
+			right: 0;
+			color: rgba(138, 23, 72, 0.8);
+			text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+		}
+
+		p {
+
+			text-align: center;
+			position: relative;
+			margin: 40px 70px;
+			text-transform: uppercase;
+			font-family: 'Open Sans', sans-serif;
+			color: #5c5c5c;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-center m-auto">
+				<h2>Personalized Birthday Cards</h2>
+				<p>from a milestone Birthday to the arival of a new baby,send them the biggest smile with one of our
+					personalized card</p>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+					<!-- Carousel indicators -->
+
+					<!-- Wrapper for carousel items -->
+					<div class="carousel-inner">
+						<div class="item carousel-item active">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/bf.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/gf.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/son.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/wife.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item carousel-item">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/son.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/son.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/son.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="img-box"><img src="images/son.png" class="img-responsive img-fluid" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Carousel controls -->
+					<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+						<i class="fa fa-chevron-left"></i>
+					</a>
+					<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+						<i class="fa fa-chevron-right"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
