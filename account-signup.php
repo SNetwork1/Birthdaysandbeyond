@@ -10,6 +10,33 @@
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <!-- //web font -->
 </head>
+<style type="text/css">
+#msgDiv{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #msgBox{
+
+    width: 400px;
+    text-align: center;
+    background-color: #29AAE1;
+    border:2px solid #ff66d9;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ff66d9;
+
+  }
+  ::placeholder {
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+  </style>
+
 <body>
 
 <?php
@@ -57,26 +84,36 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	<!-- main -->
 	<div class="main-wrapper">
 		<h1>Birthday and Beyond SignUp</h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
+		<div id="msgDiv">
+      
+      <div id="msgBox">
+        
+		<div class="agileits-top">
 				<form action="#" method="post">
                     <div class = "alert alert error"><?= $_SESSION['message'] ?></div> 
-					<input class="text" type="text" name="username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="confirmpassword" placeholder="Confirm Password" required="">
+					<h2><b>Register</b></h2><br>
+					<p>Sign in or register as a new customer</p><br>
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="text" name="username" placeholder="Username" required="">
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text email" type="email" name="email" placeholder="Email" required="">
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="password" name="password" placeholder="Password" required="">
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text w3lpass" type="password" name="confirmpassword" placeholder="Confirm Password" required="">
 					<div class="wthree-text">
 						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
+							<input type="checkbox"  required="">
 							<span>I Agree To The Terms & Conditions</span>
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+					<input style="border-radius: 18px; " type="submit" value="SIGNUP">
 				</form>
-				<p>Don't have an Account? <a href="account-login.php"> Login Now!</a></p>
+				<p>Aleady have an Account? <a href="account-login.php"> Login Now!</a></p>
 			</div>
-		</div>
+        
+
+      </div>
+
+    </div>
+		
 		<!-- copyright -->
 		<div class="agile"></div>
 		</div>
