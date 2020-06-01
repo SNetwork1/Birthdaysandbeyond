@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Birthday and Beyond SignUp</title>
+<title>Birthday and Beyond Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -34,14 +34,20 @@
   ::placeholder {
   color: gray;
   opacity: 1; /* Firefox */
+  
+body {
+  background-image: images/Login-bg.JPG !important;
 }
   </style>
 
-<body>
+<body style="background-image: ">
 
 	<!-- main -->
-	<div class="main-wrapper">
-		<h1>Birthday and Beyond SignIn</h1>
+	<div style="background-image:   url('images/Login-bg.jpg'); -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;"  class="main-wrapper" >
+		<img style="display:block; margin-left: auto; margin-right: auto; width:25%;" src="images/Login2b.png" ></img>
 		<div id="msgDiv">
       
       <div id="msgBox">
@@ -69,18 +75,7 @@
 		<div class="agile"></div>
 		</div>
 		<!-- //copyright -->
-		<ul class="bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+		
 	</div>
 	<!-- //main -->
 </body>

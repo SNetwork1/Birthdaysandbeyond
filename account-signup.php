@@ -82,8 +82,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 ?>
 	<!-- main -->
-	<div class="main-wrapper">
-		<h1>Birthday and Beyond SignUp</h1>
+	<div style="background-image:   url('images/Login-bg.jpg'); -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" class="main-wrapper">
+     
+		<img style="display:block; margin-left: auto; margin-right: auto; width:25%;" src="images/Login2b.png" ></img>
 		<div id="msgDiv">
       
       <div id="msgBox">

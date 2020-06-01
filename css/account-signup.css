@@ -102,12 +102,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- end reset --*/
   body {
-    background: #f9add3;
+	
+   
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #f9add3, #f9add3);
-    background: -moz-linear-gradient(to top, #f9add3, #f9add3);
-    background: -o-linear-gradient(to top, #f9add3, #f9add3);
-    background: linear-gradient(to top, #f9add3, #f9add3);
+    
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
