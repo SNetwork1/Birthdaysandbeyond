@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 
-?>
+?> 
 	<!-- main -->
 	<div style="background-image:   url('images/Login-bg.jpg'); -webkit-background-size: cover;
   -moz-background-size: cover;
