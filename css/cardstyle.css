@@ -91,5 +91,89 @@
 }
 
 .top-space {
-    margin-top: 50px;
+    margin-top: -41px;
+    margin-left: 13px;
+}
+.btn:hover{
+  color:  #912e6f;
+ }
+
+ button.bb1 {
+  position: relative;
+  top: -53px;
+  left: -50%;
+  transform: scale(0.5);
+  background-color: #ff69b3;
+  color: white;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 197%;
+  margin: revert;
+
+  font-weight: bold;
+}
+
+/* .zoom2:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
+} */
+button.bb2 {
+  position: relative;
+  top: -51px;
+  left: -47%;
+  transform: scale(0.5);
+  background-color: #ff69b3;
+  color: white;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 196%;
+  font-weight: bold;
+}
+
+/* .zoom3:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1); 
+  transform: scale(1.1); 
+} */
+button.bb3 {
+  position: relative;
+  top: -45px;
+  left: -44%;
+  transform: scale(0.5);
+  background-color: #ff69b3;
+  color: white;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 189%;
+  font-weight: bold;
+}
+/* .zoom4:hover {
+  -ms-transform: scale(1.1); 
+  -webkit-transform: scale(1.1); 
+  transform: scale(1.1); 
+} */
+button.bb4 {
+  position: relative;
+  top: -48px;
+  left: -200px;
+  transform: scale(0.5);
+  background-color: #ff69b3;
+  color: white;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 166%;
+  font-weight: bold;
 }
