@@ -111,6 +111,13 @@
     padding-bottom: 25px;
     margin-bottom: 10px;
 }
+.fixed {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 134px;
+      z-index: 9999;
+    }
+    
 </style>
 
 </head>
@@ -539,21 +546,32 @@
   <!-- Header -->
   <!-- Body -->
 
-  <div class="titleimg pb-4">
-    <div class="row justify-content-md-center">
-      <a href="celebrityinspired.html"><img class="img-responsive rounded pr-3   bg1" src="img/bg1.png" style="width: 400px; "></a>
-      <a href="personalizedcards.html"><img class="img-responsive rounded pl-3   bg2" src="img/bg2.jpeg" style="width: 400px; "></a>
+  
+    <div class="row justify-content-md-center overlaybutton  ">
+      <span class="zoom1"><img class="img-responsive rounded pr-3" src="img/bg1.png" style="width: 400px; ">
+      <button onclick="document.location = 'celebrityinspired.html'"  class="btn bb1">Celebrity Inspired</button>
+      </span>
+      <span class="zoom2"><img class="img-responsive rounded pl-3" src="img/bg2.jpeg" style="width: 400px; ">
+        <button onclick="document.location = 'personalizedcards.html'" class="btn bb2">Personalized Cards</button>
+      </span>
     </div>
-    <div>
+
+    <div class="fixed">
       <a href="b&b.html" class="center">
-        <img class="img-responsive rounded rounded-circle" src="img/bg5.png" style="width: 150px; margin:auto; position: absolute;left: 45%; bottom: 35%; ">
-    </a>
+        <img class="img-responsive rounded rounded-circle " src="img/bg5.png"
+          style="width: 150px;  ;left: 43%; bottom: -26px; position: absolute; ">
+      </a>
     </div>
-    <div class="row justify-content-md-center top-space">
-      <a href="forevercards.html"><img class="img-responsive rounded pr-3 " src="img/bg3.jpeg" style="width: 400px; "></a>
-      <a href="voiceover.html"><img class="img-responsive rounded pl-3 " src="img/bg4.jpeg" style="width: 400px; "></a>
+
+    <div class="row justify-content-md-center top-space" style="margin-left: 5%;">
+      <span class="zoom3"><img class="img-responsive rounded pr-3 " src="img/bg3.jpeg" style="width: 406px; margin-left: 14px;">
+        <button onclick="document.location = 'forevercards.html'" class="btn bb3" >Forever Cards</button>
+      </span>
+      <span class="zoom4"><img class="img-responsive rounded pl-3 " src="img/bg4.jpeg" style="width: 412px; margin-left: -6px; ">
+        <button onclick="document.location = 'voiceover.html'" class="btn bb4" style="width: fit-content;">Personalized Voice Over Cards</button>
+      </span>    
     </div>
-</div>
+
   <!--Top Box-->
   <div class="container">
     <div class="row justify-content-md-center myproductrow pb-5" >
@@ -622,25 +640,25 @@
         <div class="col-md-3">
           <img src="img\mom.png" class="img-responsive" >
           <div class="label-info" style=" text-align:center; color: white; background-color: #FF69B4;">
-            <h3><a href="mum.html">Mom</a></h3>
+            <h3><a href="mum.html" style="text-decoration: none; color:inherit;">Mom</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\dad.png" class="img-responsive" >
           <div class="label-info" style="  text-align:center; color: white; background-color: #FF69B4;">
-            <h3> <a href="dad.html">Dad</a></h3>
+            <h3> <a href="dad.html" style="text-decoration: none; color:inherit;">Dad</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\sis.png" class="img-responsive" >
           <div class="label-info" style=" text-align:center; color: white; background-color: #FF69B4;">
-            <h3><a href="sister.html">Sister</a></h3>
+            <h3><a href="sister.html" style="text-decoration: none; color:inherit;">Sister</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\bro.png" class="img-responsive" >
           <div class="label-info" style=" text-align:center; color: white; background-color: #FF69B4;">
-            <h3><a href="brother.html">Brother</a></h3>
+            <h3><a href="brother.html" style="text-decoration: none; color:inherit;">Brother</a></h3>
           </div>
         </div>
       </div>
@@ -648,25 +666,25 @@
         <div class="col-md-3">
           <img src="img\gf.png" class="img-responsive">
           <div class="label-info" style=" text-align:center; color: white; background-color: #FF69B4;">
-            <h3><a href="girlfriend.html">Girlfriend</a></h3>
+            <h3><a href="girlfriend.html" style="text-decoration: none; color:inherit;">Girlfriend</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\bf.png" class="img-responsive" >
           <div class="label-info" style=" text-align:center; color: white; background-color: #FF69B4;">
-            <h3><a href="boyfriend.html">Boyfriend</a></h3>
+            <h3><a href="boyfriend.html" style="text-decoration: none; color:inherit;">Boyfriend</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\wife.png" class="img-responsive" >
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="wife.html">Wife</a></h3>
+            <h3><a href="wife.html" style="text-decoration: none; color:inherit;">Wife</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\husband.png" class="img-responsive">
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="husband.html">Husband</a></h3>
+            <h3><a href="husband.html" style="text-decoration: none; color:inherit;">Husband</a></h3>
           </div>
         </div>
        </div>
@@ -674,25 +692,25 @@
         <div class="col-md-3">
           <img src="img\daughter.png" class="img-responsive" >
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="daughter.html">Daughter</a></h3>
+            <h3><a href="daughter.html" style="text-decoration: none; color:inherit;">Daughter</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\son.png" class="img-responsive">
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="son.html">Son</a></h3>
+            <h3><a href="son.html" style="text-decoration: none; color:inherit;">Son</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\grandma.png" class="img-responsive">
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="granma.html">Grandma</a></h3>
+            <h3><a href="granma.html" style="text-decoration: none; color:inherit;">Grandma</a></h3>
           </div>
         </div>
         <div class="col-md-3">
           <img src="img\grandpa.png" class="img-responsive" >
           <div class="label-info" style="text-align:center;  color: white; background-color: #FF69B4;">
-            <h3><a href="grandad.html">Grandpa</a></h3>
+            <h3><a href="grandad.html" style="text-decoration: none; color:inherit;">Grandpa</a></h3>
           </div>
         </div>
       </div>
