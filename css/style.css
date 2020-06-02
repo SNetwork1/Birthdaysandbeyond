@@ -628,15 +628,26 @@ a.btn-social,
     font-size: 2.5em;
 }
 
-a {
+#link{
     color: black;
+    font-size: medium;
+}
+
+li{
+  margin: 6px 0;
 }
 
 #country{
     color:#f06e9c;
     font-weight: bold;
+    font-size: large;
 }
 
+#copyright{
+    background-color: #f06e9c; 
+    color: white;
+    font-size: medium;
+}
 .social-icons {
     list-style: none;
     padding: 0;
@@ -784,8 +795,10 @@ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 
     
 }
 
-
-/*  Header CSS */
+#custom-heading{
+    color:black;
+}
+/*  Header Css
 
 header {
   padding: 156px 0 100px;
@@ -893,6 +906,6 @@ a{
     }
 
     
-/* Header CSS End */
+Header CSS End */
 
 
