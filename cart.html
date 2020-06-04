@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthdays and Beyond Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS only -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/mega-menu.css" />
+
+
+    <link rel = "icon" href ="img/birthday-card.png" type = "image/x-icon"> 
+
+</head>
+  <style type="text/css">
+  .nav li a {
+  color: black;
+  }
+  form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+  }
+  /* Style the submit button */
+  form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #F7F7F7;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  }
+  form.example button:hover {
+  background: #0b7dda;
+  }
+  /* Clear floats */
+  form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  .notification {
+  position: relative;
+  display: inline-block;
+  }
+  .notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  }
+  .myNav_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  }
+  .myNav_li {
+  float: left;
+  }
+  .myNav_li a {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FE69B4;
+  text-align: center;
+  padding: 14px 16px;
+  margin-right: 20px;
+  text-decoration: none;
+  }
+  .fa1 {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  }
+  .fa1:hover {
+  opacity: 0.7;
+  }
+  #pageTitle {
+   /*width: 100%; */
+   padding-top: 30px;
+   text-align: center; 
+   border-bottom: 3px solid #ff66d9; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+   color: #ff66d9;
+   margin-left: 50px;
+   margin-right: 50px;
+  } 
+
+  #pageTitle span { 
+      font-size: 24px;
+      background:white; 
+      /*#f8f9fa*/
+      padding:0 20px; 
+  }
+  .account-link-div{
+    display: flex;align-items: center;justify-content: center;
+  }
+  .account-link{
+    width: 50%;background-color: #ff66d9;color: white;font-weight: bold;font-size: 14px;
+  } 
+  .account-link-text{
+     padding: 15px;font-size: 12px;
+  }
+  
+		#msgDiv{
+		padding: ;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		}
+	  #msgBox{
+
+		width: 600px;
+		height:290px;
+		text-align: center;
+		background-color: ;
+		background-image: ; 
+		background-size: ;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		border:2px solid #ff66d9;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		border-radius: 5px;
+		box-shadow: 3px 3px 5px #ff66d9;
+
+	  }
+	  
+	  #msgDiv1{
+		padding: ;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		}
+	  #msgBox1{
+
+		width: 230px;
+		height:290px;
+		text-align: center;
+		background-color: ;
+		background-image: ; 
+		background-size: ;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		border:2px solid #ff66d9;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		border-radius: 5px;
+		box-shadow: 3px 3px 5px #ff66d9;
+
+	  }
+  
+  </style>
+  <body style="background-color: #F7F7F7;">
+ 
+  <!-- Header -->
+		<div style="background-image: url('gift.jpeg');">
+		   <div class="container" style="padding-bottom: 40px;">
+			 
+			<h1  id="pageTitle"><span style="background-color:#F7F7F7; "><b>My Cart</b></span></h1>
+
+		   </div> 
+			<div class="row" style=" padding: 0px 0px 0px 250px;" >
+				<div id="msgDiv" style= "padding: 0px 10px 0px 0px; ">
+					<div id="msgBox" style="background-color:#">
+						<div class= "row" style="margin: 0px; color: white; background-color: #FF69B4;">
+							<h2 class="col-md-5">Items</h2>
+							<h2 class="col-md-2">Quantity</h2>
+							<h2 class="col-md-2">Price</h2>
+							<h2 class="col-md-3"></h2>
+						</div>
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-5">
+								<div class="row">
+								<img style=" padding: 3px;" alt="card 1"  style=" top: 0;" width="50" height="70" src="Capture.jpg">
+								<h4 style=" padding: 3px;">Large Birthday 1 <p style="color: gray; ">(Standard Card)</p></h4>
+								</div>
+							</div>	
+								
+							<div style=" padding: 3px;" class="col-md-2">
+							<h2 >1</h2>
+							</div>
+							<div style=" padding: 3px;"  class="col-md-2">
+							<h2 >$20.00</h2>
+							</div>
+							<div style=" padding: 3px;  "  class="col-md-3">
+								<a href="#"><h2 style="color:#FF69B4" >Delete Item</h2></a>
+							</div>
+								
+						</div>
+						<hr>
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-5">
+								<div class="row">
+								<img style=" padding: 3px;" alt="card 1"  style=" top: 0;" width="50" height="70" src="Capture.jpg">
+								<h4 style=" padding: 3px;">Large Birthday 1 <p style="color: gray; ">(Standard Card)</p></h4>
+								</div>
+							</div>	
+								
+							<div style=" padding: 3px;" class="col-md-2">
+							<h2 >1</h2>
+							</div>
+							<div style=" padding: 3px;"  class="col-md-2">
+							<h2 >$20.00</h2>
+							</div>
+							<div style=" padding: 3px;  "  class="col-md-3">
+								<a href="#"><h2 style="color:#FF69B4" >Delete Item</h2></a>
+							</div>
+								
+						</div>
+						<hr>
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-5">
+								<div class="row">
+								<img style=" padding: 3px;" alt="card 1"  style=" top: 0;" width="50" height="70" src="Capture.jpg">
+								<h4 style=" padding: 3px;">Large Birthday 1 <p style="color: gray; ">(Standard Card)</p></h4>
+								</div>
+							</div>	
+								
+							<div style=" padding: 3px;" class="col-md-2">
+							<h2 >1</h2>
+							</div>
+							<div style=" padding: 3px;"  class="col-md-2">
+							<h2 >$20.00</h2>
+							</div>
+							<div style=" padding: 3px;  "  class="col-md-3">
+								<a href="#"><h2 style="color:#FF69B4" >Delete Item</h2></a>
+							</div>
+								
+						</div>
+						
+				</div>
+				</div>
+				<div  id="msgDiv1">
+					<div id="msgBox1" style="background-color:#">
+						
+						<h3 style="padding-top: ; color: black;  "><b>Basket Summary</b></h3>
+						<br>
+						<div class= "row" style="margin: 0px; color: black; background-color: ; ">
+							<div class="col-md-8">
+								<h5 style=" padding: 3px; text-align: left;">Sub Total (2 Items) </h5>
+							</div>		
+							<div style=" padding: 3px;" class="col-md-2">
+							<h5 >$40.00</h5>
+							</div>
+						</div>
+						<hr>
+
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-8">
+								<h5 style=" padding: 3px; text-align: left;">P&P </h5>
+							</div>		
+							<div style=" padding: 3px;" class="col-md-2">
+							<h5 >$40.00</h5>
+							</div>
+						</div>
+						<hr>
+
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-8">
+								<h5 style=" padding: 3px; text-align: left;">Order Total </h5>
+							</div>		
+							<div style=" padding: 3px;" class="col-md-2">
+							<h5 >$40.00</h5>
+							</div>
+						</div>
+						<div class= "row" style="margin: 0px; color: black; background-color:;">
+							<div class="col-md-8">
+								<h5 style=" padding: 3px; text-align: left;">Total To Pay </h5>
+							</div>		
+							<div style=" padding: 3px;" class="col-md-2">
+							<h5 >$40.00</h5>
+							</div>
+						</div>
+						<div class="text-center" style=" margin: 5px; padding: 20x; border-radius: 10px; color: white; background-color: #FF69B4;">
+							<h3>Pay with card or Paypal</h3>
+						</div>
+						<div class="row" style="padding-left: 25px; padding-top: 5px;">
+						<div class="text-center" style=" margin: 5px; padding-top: 5px; border-radius: 10px; color: black; background-color: ;">
+							<input placeholder="Discount Code" style="padding: 6x; border-radius: 10px; border: 1px solid #800080;color: black; padding: 2px;"></input>
+						</div>
+						<div class="text-center" style=" margin: 5px ; padding: ; border-radius: 10px; color: white; background-color: #800080;">
+							<a style="color: white;" href="#"><h3 style=" padding: 4px 10px 4px 10px;">Apply</h3></a>
+						</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			
+			</div>
+
+		
+			<div class= "row" style="margin-left: 200px; padding-left: 40px; padding-top: 20px; color: ; text-align: left;">
+				<h1 class="col-md-3">Send to</h1>
+				<h1 class="col-md-3">Dispatch on</h1>
+				<img alt="card 1"  style=" top: 0;" width="120" height="60" src="img/visa.png">
+				<img alt="card 1"  style=" top: 0;" width="120" height="60" src="img/mastercard.png">
+			</div>
+			
+			<div class= "row" style="margin-left: 200px; padding-left: 40px; color: ; text-align: left;">
+				<h4 class="col-md-3" >House#1 street 2A, Lahore</h4>
+				<h4 class="col-md-3" >Tuesday, June 2, 2003</h4>
+				
+			</div>
+			<div class= "row" style="margin-left: 200px; padding-left: 40px; color:#FF69B4 ; text-align: left;">
+				<a class="col-md-3"><h4  >Add Reciepent</h4></a>
+				<a class="col-md-3"><h4  >Change</h4></a>
+				<img alt="card 1"  style=" top: 0;" width="120" height="60" src="img/maestro.png">
+				<img alt="card 1"  style=" top: 0;" width="120" height="60" src="img/ipay.png">
+				
+			</div>
+			
+			
+			
+		   <div class="container-md">
+			<div style="padding: 40px;"class="text-center" >
+				<h1><b>You May Also Like</b></h1>
+				
+			</div>
+			<hr>
+										  <!-------------ROW 1--------------->
+				<div style="padding:20px 20px 20px 20px; ">
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style="margin-left: 12px; padding: 5px; border-radius: 0px 0px 8px 8px;">Fun and Naughty</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; padding: 5px; border-radius:  0px 0px 8px 8px;">No-photo cards</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; border-radius: 0px 0px 8px 8px;">Cute</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style=" margin-right: 12px;width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" padding: 5px; border-radius: 0px 0px 8px 8px;">Sport</a>
+							</div>
+						</div>
+					</a>
+					
+				</div>
+
+		<!-------------ROW 2--------------->
+
+				<div style="padding:20px 20px 20px 20px; class="">
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style="margin-left: 12px; padding: 5px; border-radius: 0px 0px 8px 8px;">Food and Drink</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; padding: 5px; border-radius:  0px 0px 8px 8px;">Cars and Bikes</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; border-radius: 0px 0px 8px 8px;">TV and Film</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style=" margin-right: 12px;width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" padding: 5px; border-radius: 0px 0px 8px 8px;">Me to You</a>
+							</div>
+						</div>
+					</a>
+					
+				</div>
+
+			<!--------------ROW 3--------------->  
+				<div style="padding:20px 20px 20px 20px; class="">
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style="margin-left: 12px; padding: 5px; border-radius: 0px 0px 8px 8px;">Marvel</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; padding: 5px; border-radius:  0px 0px 8px 8px;">Disney</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style="width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" margin-left: 12px; border-radius: 0px 0px 8px 8px;">Star Wars</a>
+							</div>
+						</div>
+					</a>
+					<a href="#">
+						<div style="padding: 0px;" class="col-md-3">
+							<img src="capture.jpg" style=" margin-right: 12px;width: 60%; height: 250px;">
+							<div class="account-link-div" style="padding: 5px;">
+								<a href="" class="btn account-link" style=" padding: 5px; border-radius: 0px 0px 8px 8px;">Harry Potter</a>
+							</div>
+						</div>
+					</a>
+					
+				</div>
+
+			</div>
+		   
+		</div>
+
+  </body>
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/69b29b2f79.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="js/dropdown.js"></script>
+  </html>
