@@ -11,6 +11,11 @@
 <!-- //web font -->
 </head>
 <style type="text/css">
+ html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 #msgDiv{
     padding: 50px;
     display: flex;

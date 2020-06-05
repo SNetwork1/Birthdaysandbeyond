@@ -26,6 +26,12 @@
 
 </head>
   <style type="text/css">
+  
+   html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
   .nav li a {
   color: black;
   }
