@@ -41,24 +41,24 @@
   opacity: 1; /* Firefox */
   
 body {
-  background-image: images/Login-bg.JPG !important;
+  background-image: img/Login-bg.JPG !important;
 }
   </style>
 
 <body style="background-image: ">
 
 	<!-- main -->
-	<div style="background-image:   url('images/Login-bg.jpg'); -webkit-background-size: cover;
+	<div style="background-image:   url('img/Login-bg.jpg'); -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;"  class="main-wrapper" >
-		<img style="display:block; margin-left: auto; margin-right: auto; width:25%;" src="images/Login2b.png" ></img>
+		<img style="display:block; margin-left: auto; margin-right: auto; width:25%;" src="img/Login2b.png" ></img>
 		<div id="msgDiv">
       
       <div id="msgBox">
         
 		<div class="agileits-top">
-				<form action="login.php" method="post">
+				<form action="#" method="post">
                     
 					<h2><b>Account Login</b></h2><br>
 					<p>If you Already have an account, login</p><br>
@@ -66,9 +66,9 @@ body {
 				<br>
 					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="password" name="password" placeholder="Password" required="">
 					
-					<input style="border-radius: 18px; " type="submit" name="login">
+					<input style="border-radius: 18px; " type="submit" value="SIGNIN">
 				</form>
-				<p>Don't have an Account? <a href="account-signup.php"> Register Now!</a></p>
+				<p>Don't have an Account? <a href="account-login.php"> Register Now!</a></p>
 			</div>
         
 

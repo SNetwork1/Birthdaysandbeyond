@@ -107,6 +107,16 @@
   .fa1:hover {
   opacity: 0.7;
   }
+  
+  .account-link-div{
+    display: flex;align-items: center;justify-content: center;
+  }
+  .account-link{
+    width: 50%;background-color: #ff66d9;color: white;font-weight: bold;font-size: 14px;
+  } 
+  .account-link-text{
+     padding: 15px;font-size: 12px;
+  }
   </style>
   <body style="background-color: #F7F7F7;">
     <!-- Header -->
@@ -575,19 +585,19 @@
 
 								<div class="small-box border-0">
 
-									<label class="checkbox-container">Luxury Choclate Card
+									<label  class="checkbox-container">Luxury Choclate Card
 
 										<input type="checkbox" checked="checked">
 
-										<span class="checkmark"></span>
+										<span style=" background-color: #F7F7F7 " class="checkmark"></span>
 
 									</label>
 
-									<label class="checkbox-container">Large Card
+									<label  class="checkbox-container">Large Card
 
 										<input type="checkbox">
 
-										<span class="checkmark"></span>
+										<span style=" background-color: #F7F7F7 " class="checkmark"></span>
 
 									</label>
 
@@ -675,9 +685,9 @@
 
 							<div   class="col-sm-7">
 
-								<div style=" background-color: #F7F7F7 " class="inside-box ">
+								<div style=" background-color: #F7F7F7 " class="inside-box "><br>
 
-									<h6 class="bor">Card Front</h6>
+									<h6 style="font-size: 20px;" class="bor">Card Front</h6>
 
 									<section class="mb-3">
 
@@ -707,14 +717,15 @@
 
 																	<i class="glyphicon glyphicon-download-alt"></i>
 
-																	<p>Choose an image file or drag it here.</p>
+																	<p>Choose an Audio file or drag it here.</p>
 
 																</div>
 
 																<input type="file" name="img_logo" class="dropzone">
 
 															</div>
-
+															<br>
+															<h5>Only files smaller than 15MB can b uploaded.</h5>
 														</div>
 
 													</div>
@@ -735,13 +746,13 @@
 
 											<div class="float-left mr-2">
 
-												<strong>Image Size</strong>
+												
 
 											</div>
 
 											<div class="float-left">
 
-												<input type="range" class="custom-range w-0">
+												
 
 											</div>
 
@@ -751,23 +762,7 @@
 
 										<div class="col-md-4">
 
-											<div class="clear"></div>
-
-											<div class="float-left mr-2">
-
-												<strong>Rotate</strong>
-
-											</div>
-
-											<div class="float-left">
-
-												<a href="javascript://"><i class="fas fa-undo"></i></a>
-
-												<a href="javascript://"><i class="fas fa-redo"></i></a>
-
-											</div>
-
-											<div class="clear"></div>
+											
 
 										</div><!-- /4 -->
 
@@ -775,9 +770,9 @@
 
 									<div class="mt-4 text-center">
 
-										<h6 class="small mb-3">Preview your card before Purchasing</h6>
+										<h4 class="medium mb-3">Preview your card before Purchasing</h4>
 
-										<button class="btn btn-purchase">Preview your card</button>
+										
 
 									</div>
 
@@ -792,20 +787,21 @@
 				</div><!-- /outer-box -->
 
 				<div class="text-right mt-3">
-
-					<label class="checkbox-container"><strong>Quality:</strong>
+					<strong style="font-size: 15px;  ">Quantity:</strong>
+					<label class="checkbox-container">
 
 						<input type="checkbox">
 
-						<span class="checkmark"></span>
+						<span style=" margin-top: -8px; background-color: #F7F7F7 " class="checkmark"></span>
 
 					</label>
 
-					<button class="btn btn-purchase bo">Add to Cart</button>
+					<button style="font-size: 15px; padding: 2px 10px 2px 10px; margin-right:10px; border-radius: 8px; border:1px solid #FF69B4; width: 150px; color: black;  background-color: transparent" class="btn account-link">Add to Cart</button>
 
-					<button class="btn btn-purchase">Continue</button>
+					<button style="width: 100px;" class="btn account-link">Continue</button>
 
 				</div>
+				<br><br>
 
 			</div><!-- /col-10 -->
 
