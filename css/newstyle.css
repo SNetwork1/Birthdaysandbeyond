@@ -1,0 +1,168 @@
+.my-navbar {
+  background-color: #ff69b3;
+  font-weight: 700;
+}
+
+.bg-pink-cards {
+  background-color: #ff69b3;
+}
+
+.card {
+  border: 0px !important;
+}
+
+.card-body {
+  padding: 2px 0px 2px 0px;
+}
+
+.centerfloat-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  margin: 0 auto;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.book {
+  height: 190px;
+  width: 15rem;
+  font-size: 1.4rem;
+  box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  /* color: #484e4a; */
+}
+
+.page {
+  position: relative;
+}
+.page__1 {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 1s 0.3s;
+  transform-origin: 0 50%;
+  z-index: 2;
+  backface-visibility: visible;
+}
+
+.page__1::after {
+  content: url("PC_back.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  z-index: 1;
+  opacity: 1;
+  transform: rotateY(180deg);
+  transition: all 0.3s 0.5s;
+}
+
+.page__2 {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.page:hover .page__1 {
+  transform: rotateY(-180deg);
+  box-shadow: 1.5rem 2rem 3rem rgba(0, 0, 0, 0.25);
+}
+.page:hover .page__1::after {
+  opacity: 1;
+}
+a:hover img {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.web-bg {
+  background-image: url("bg-1.png");
+  background-size: 100%;
+  position: relative;
+}
+
+.pageleft,
+.pageright {
+  width: 100%;
+  height: 100%;
+}
+.pageleft {
+  position: absolute;
+}
+.pageright {
+  position: relative;
+}
+
+.mywrapper {
+  perspective: 1000px;
+  perspective-origin: 100px 100px;
+  -webkit-perspective: 1000px;
+  -webkit-perspective-origin: 100px 100px;
+}
+.mywrapper:hover .pageright {
+  transform: rotateY(-180deg);
+  transform-origin: 0 100px;
+  transition: transform 1s;
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transform-origin: 0 100px;
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.flipcard-container {
+  margin-top: 20px;
+  height: 300px;
+  width: auto;
+}
+
+.flipcard-containerbg {
+  background-image: url("bg.png");
+  background-size: 100%;
+}
+
+#cardflip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 800px;
+  cursor: pointer;
+}
+#card1 {
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: left center;
+}
+#card1:hover {
+  transition: transform 1s;
+  transform: rotateY(-180deg);
+}
+#card1 div,
+.inside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+
+.fab-youtube {
+color: #e52d27;;
+}

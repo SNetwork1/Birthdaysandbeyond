@@ -58,7 +58,7 @@ body {
       <div id="msgBox">
         
 		<div class="agileits-top">
-				<form action="#" method="post">
+				<form action="login.php" method="post">
                     
 					<h2><b>Account Login</b></h2><br>
 					<p>If you Already have an account, login</p><br>
@@ -66,9 +66,9 @@ body {
 				<br>
 					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="password" name="password" placeholder="Password" required="">
 					
-					<input style="border-radius: 18px; " type="submit" value="SIGNIN">
+					<input style="border-radius: 18px; " type="submit" name="login">
 				</form>
-				<p>Don't have an Account? <a href="account-login.php"> Register Now!</a></p>
+				<p>Don't have an Account? <a href="account-signup.php"> Register Now!</a></p>
 			</div>
         
 
