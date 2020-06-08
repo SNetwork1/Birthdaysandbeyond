@@ -1,53 +1,3 @@
-<?php include"db.php"; ?>
-<?php session_start(); ?>
-<?php 
-
-	if (isset($_POST['submit'])) {
-		$username = $_POST['username'];
-		$email    = $_POST['email'];
-		$password = $_POST['password'];
-
-		if (!empty($username)&& !empty($email) && !empty($password)) {
-			
-			$username = mysqli_real_escape_string($conn,$username);
-			$email	  = mysqli_real_escape_string($conn,$email);
-			$password = mysqli_real_escape_string($conn,$password);
-
-			$query = "SELECT randSalt FROM user";
-			$randsaltQuery = mysqli_query($conn,$query);
-
-			if(!$randsaltQuery){
-				die("Query Failed". mysqli_error($conn));
-			}
-
-			$row = mysqli_fetch_array($randsaltQuery);
-			$salt = $row['randSalt'];
-			
-			$password = crypt($password,$salt);
-
-
-			$insertquery = "INSERT INTO user (username, email, password)";
-			$insertquery .= "VALUES('{$username}','{$email}','{$password}')";
-			$registerquery = mysqli_query($conn,$insertquery);
-			if(!$randsaltQuery){
-				die("Query Failed". mysqli_error($conn).''.mysqli_errno($conn));
-			}
-
-			header("Location: regsuccess.php");
-
-
-
-
-	
-		}
-
-
-		
-	}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +11,11 @@
 <!-- //web font -->
 </head>
 <style type="text/css">
+ html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 #msgDiv{
     padding: 50px;
     display: flex;
@@ -89,23 +44,68 @@
 
 <body>
 
+<?php
+session_start();
+$_SESSION['message'] = '';  
+//connect to mysql
 
+
+$mysqli = mysqli_connect("localhost","sydneysoft_birthdaysandbeyond","Rv+Jfh[vZ-!O","sydneysoft_birthdaysandbeyond");
+ if ($mysqli->connect_error){
+	 die('Connect Error:' .$mysqli->connect_errno .': ' . $mysqli->connect_error);
+ }
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+   if ($_POST['password'] == $_POST['confirmpassword']){
+    // two password are equal to eachother
+    	$username = $mysqli->real_escape_string($_POST['username']);
+    	$email =  $mysqli->real_escape_string($_POST['email']);
+    	$password = md5($_POST['password']);
+	}	
+		$_SESSION['username'] = $username;
+
+		$sql = "INSERT INTO user (username, email, password) VALUES('$username', '$email', '$password')";
+		$insert = $mysqli->query($sql);
+
+		if($insert){
+			echo "Success: row ID:($mysqli->insert_id)";
+		} else{
+			die("Error: {$mysqli->errno} :{$mysqli->error}");
+		}	
+
+		if($mysqli->query($sql) === true){
+			$_SESSION['message'] = "Registration Sucessful !";
+			header('location: myaccount.html');
+		}
+		else{
+		$_SESSION['message'] = "Registration failed";
+		}
+ $mysqli->close();
+}
+
+
+?> 
 	<!-- main -->
-	<div class="main-wrapper">
-		<h1>Birthday and Beyond SignUp</h1>
+	<div style="background-image:   url('img/Login-bg.jpg'); -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" class="main-wrapper">
+     
+		<img style="display:block; margin-left: auto; margin-right: auto; width:25%;" src="img/Login2b.png" ></img>
 		<div id="msgDiv">
       
       <div id="msgBox">
         
 		<div class="agileits-top">
-				<form action="account-signup.php" method="post">
-                    <div class = "alert alert error"></div> 
+				<form action="#" method="post">
+                    <div class = "alert alert error"><?= $_SESSION['message'] ?></div> 
 					<h2><b>Register</b></h2><br>
 					<p>Sign in or register as a new customer</p><br>
 					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="text" name="username" placeholder="Username" required="">
 					<input style="border-radius: 18px; background-color: white; color: black;" class="text email" type="email" name="email" placeholder="Email" required="">
-					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="password" name="password" placeholder="Password" id="password" required="">
-					<input style="border-radius: 18px; background-color: white; color: black;" class="text w3lpass" type="password" name="confirmpassword" placeholder="Confirm Password" id="confirm_password" required="">
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text" type="password" name="password" placeholder="Password" required="">
+					<input style="border-radius: 18px; background-color: white; color: black;" class="text w3lpass" type="password" name="confirmpassword" placeholder="Confirm Password" required="">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox"  required="">
@@ -113,7 +113,7 @@
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input style="border-radius: 18px; " type="submit" name="submit">
+					<input style="border-radius: 18px; " type="submit" value="SIGNUP">
 				</form>
 				<p>Aleady have an Account? <a href="account-login.php"> Login Now!</a></p>
 			</div>
@@ -142,21 +142,4 @@
 	</div>
 	<!-- //main -->
 </body>
-<script>
-var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-
-</script>
-
 </html>
