@@ -1,0 +1,98 @@
+
+
+
+  
+  .book {
+    height: 190px;
+    width: 15rem;
+    font-size: 1.4rem;
+    box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    /* color: #484e4a; */
+  }
+  
+  .page {
+    width: 100%;
+    height: 190px;
+    perspective: 1500px;
+  }
+  .page__1 {
+    /* background-color: #0D5C63; */
+    color: #fff;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 1s 0.3s;
+    transform-origin: 0 50%;
+    z-index: 2;
+  }
+  .page__1::after {
+    color: #eff0eb;
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    /* background-color: #424B54; */
+    width: 100%;
+    height: 190px;
+    z-index: 1;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: all .3s .5s;
+  }
+  .page__2 {
+    background-color: #BAA898;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  .page:hover .page__1 {
+    transform: rotateY(-180deg);
+    box-shadow: 1.5rem 2rem 3rem rgba(0, 0, 0, 0.25);
+  }
+  .page:hover .page__1::after {
+    opacity: 1;
+  }
+  a:hover img {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bg4 {
+
+    position: absolute;
+    z-index: -1;
+  
+}
+
+.top-space {
+    margin-top: -41px;
+    margin-left: 13px;
+}
+.btn:hover{
+  color:  #912e6f;
+ }
+
+
+button.bb4 {
+    position: relative;
+    top: -12px;
+    left: -30px;
+    transform: scale(0.5);
+    background-color: #ff69b3;
+    color: white;
+    font-size: 30px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 123%;
+    font-weight: bold;
+}
