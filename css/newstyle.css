@@ -123,6 +123,8 @@ a:hover img {
   margin-top: 20px;
   height: 300px;
   width: auto;
+  margin-right: 9px;
+  margin-left: 150px;
 }
 
 .flipcard-containerbg {

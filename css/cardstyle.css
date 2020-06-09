@@ -146,7 +146,7 @@ button.bb2 {
 button.bb3 {
   position: relative;
   top: -45px;
-  left: -44%;
+  left: -39%;
   transform: scale(0.5);
   background-color: #ff69b3;
   color: white;
@@ -155,7 +155,7 @@ button.bb3 {
   border: none;
   border-radius: 5px;
   text-align: center;
-  width: 189%;
+  width: 157%;
   font-weight: bold;
 }
 /* .zoom4:hover {
@@ -166,7 +166,7 @@ button.bb3 {
 button.bb4 {
   position: relative;
   top: -48px;
-  left: -200px;
+  left: -174px;
   transform: scale(0.5);
   background-color: #ff69b3;
   color: white;
@@ -175,6 +175,6 @@ button.bb4 {
   border: none;
   border-radius: 5px;
   text-align: center;
-  width: 166%;
+  width: 191%;
   font-weight: bold;
 }
