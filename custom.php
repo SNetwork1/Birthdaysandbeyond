@@ -7,13 +7,13 @@
 
   // If upload button is clicked ...
   if (isset($_POST['submit'])) {
-  	// Get image name
-  //  $image = $_FILES['file']['name'];
-   // $_POST['card_left_text']= ('<script> markup1, markup2, markup3</script>');
-  //  $card_left_text= ($_POST['card_left_text']);
+	// Get image name
+	//  $image = $_FILES['file']['name'];
+	// $_POST['card_left_text']= ('<script> markup1, markup2, markup3</script>');
+	//  $card_left_text= ($_POST['card_left_text']);
 
-   // $_POST['card_right_text']= ('<script> markup21, markup22, markup23</script>');
-  //  $card_right_text= ($_POST['card_right_text']);
+	// $_POST['card_right_text']= ('<script> markup21, markup22, markup23</script>');
+	//  $card_right_text= ($_POST['card_right_text']);
     
     
     // Get text
@@ -44,26 +44,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><title>Customize cards</title>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" /> -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/css/mega-menu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" /> 
 
-    <link rel = "icon" href ="img/birthday-card.png" type = "image/x-icon">
-
+  <link rel="icon" href="img/birthday-card.png" type="image/x-icon">
 </head>
 
 <style type="text/css">
@@ -164,7 +153,7 @@ span:hover + div {
 
 .tab {
   overflow: hidden;
-  border: 2px solid #e8e6eb;
+  border: 2px solid grey;
   background-color:white;
   display: inline-block;
   padding: 1rem;
@@ -177,10 +166,8 @@ span:hover + div {
   border:1px solid #e8e6eb;
 }
 .tab-long {
-  overflow: hidden;
   border: 2px solid #e8e6eb;
   background-color:white;
-  display: inline-block;
   padding: 0.3rem;
   text-align: center;
   font-size: 2rem;
@@ -199,7 +186,7 @@ span:hover + div {
 
   background-color: #269120;
   font-weight: bold;
-  color: grey;
+  color: white;
   display: inline-block;
 }
 .my-h2-inline{
@@ -231,7 +218,7 @@ span:hover + div {
 
 .input-tab{
 
-    color: grey;
+    color: black;
     height:6rem;
     width:6rem;
     display:inline-block;
@@ -271,7 +258,7 @@ span:hover + div {
    display: inline;
 }
 img{
-  height: 57rem;
+  height: 50rem;
   width: 50rem;
 }
 .fileUpload {
@@ -365,7 +352,7 @@ img{
   .fa1:hover {
   opacity: 0.7;
   }
-#close-image img {
+#close-image imag {
     display: block;
     height: 130px;  
     width: 100px;
@@ -376,428 +363,666 @@ img{
     background-size: 100px 130px;
     height: 134px;  
     width: 104px;
-}
+}  </style>
+      
+<body style="background-color: #F7F7F7;">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top custom-nav" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome To Birthdays & Beyond!</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item ">
+							<a class="nav-link js-scroll-trigger" href="#store">Store</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#FAQ">FAQ</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								ENG
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Language 1</a>
+								<a class="dropdown-item" href="#">Language 2</a>
+								<a class="dropdown-item" href="#">Language 3</a>
+							</div>
+						</li>
 
-  </style>
-  <body style="background-color: #F7F7F7;">
-    <!-- Header -->
-      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #FFC1E1">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								USD
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Currency 1</a>
+								<a class="dropdown-item" href="#">Currency 2</a>
+								<a class="dropdown-item" href="#">Currency 3</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
 
-        <div  class= "container-fluid">
+  <!---Menu Bar Starts--->
 
-          <div class = "text-center" style="color: white;"><h1>Welcome to Birthdays and Beyond!</h1>
-
-          </div>
-
-
-          <div class="container">
-            <div  class= "item">
-            <ul class="navbar navbar-expand-lg navbar-light">
-
-
-            <a button type="button" class="btn btn-secondary btn-lg">Store</a>
-            <a button type="button" class="btn btn-secondary btn-lg">Newsletter</a>
-            <a button type="button" class="btn btn-secondary btn-lg">FAQs</a>
-
-            <div class="btn-group">
-              <a button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                ENG
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Language 1</a>
-                <a class="dropdown-item" href="#">Language 2</a>
-              </div>
-            <div class="btn-group">
-              <a button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                USD
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Currency 1</a>
-                <a class="dropdown-item" href="#">Currency 2</a>
-              </div>
-              </div>
-         </div>
-        </ul>
-        </div>
-      </div>
-
-      <div class= "item">
-        <a href="account-signup.php" style="color: black; padding-left: 50px;">
-        <i class="fas fa-user " style="font-size:30px; "></i>
-        <div class= "text-center" style="color: black; padding-left: 50px">
-        <br><b>Account</b><br>Login/Join</div> </a>
-
-      </div>
-      <div class= "item">
-        <a href="#" style="color: black; padding-left: 50px; ">
-          <i class="fas fa-shopping-cart" style="font-size:30px;">
-          </i>
-        <div style="color: black; padding-left: 50px">
-        <br> <b>Cart</b> <br>35.20$</div>
-      </a>
-     </div>
-
-    </div>
-</nav>
-
-                                <!---Menu Bar Starts--->
-
-    <div class="container-1">
-   <!--  <a class = "navbar-brand" href="/index.html">
-        <img src="/img/Logo B&B.png" width="170" height="50" class="d-inline-block align-top" alt="">
+  <div class="container-fluid bg-primary">
+    <!--  <a class = "navbar-brand" href="index.html">
+        <img src="img/Logo B&B.png" width="170" height="50" class="d-inline-block align-top" alt="">
       </a>-->
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #f6c0e0">
-           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto justify-content-end ">
-          <div class="container">
-          <li class="nav-item active">
-
-            <a class = "navbar-brand-lg" href="index.html">
-              <img src="/img/bb-logo.jpeg" width="80" height="60" class="inline align-top" styles="top:80;" alt="">
-            </a>
-
-                                      <!--- Home
-            <a class="btn btn-light" class="text-white bg-dark" style = "background-color: #ff66d9;" href="index.html" type="button" aria-haspopup="true" aria-expanded="false" >Home</a>
-          </li>
-
-                                     <!--   Cards   -->
-
-          <li class="nav-item dropdown">
-          <a href="cards.html" class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" role="button" id="dropdownMenuLink"  data-toggle="dropdown" aria-haspopup="true">
-            Cards
-          </a>
-
-          <div class="dropdown-menu mega-menu" aria-labelledby="dropdownMenuLink">
-         <div class="row">
-          <div class= "col-md-3">
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><b>Popular</b></a>
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item"href="">Anniversary</a>
-          <a class="dropdown-item"href="">Bestsellers</a>
-          <a class="dropdown-item"href="">Birthday Cards</a>
-          <a class="dropdown-item"href="">Engagements</a>
-          <a class="dropdown-item"href="">Giant Cards</a>
-          <a class="dropdown-item"href="">Leaving</a>
-          <a class="dropdown-item"href="">New in Cards</a>
-          <a class="dropdown-item"href="">Wedding</a>
-
-      <---
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><b>Seasonal</b></a>
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item"href="">Christmas</a>
-          <a class="dropdown-item"href="">Easter</a>
-          <a class="dropdown-item"href="">Father's Day</a>
-          <a class="dropdown-item"href="">Mother's Day</a>
-          <a class="dropdown-item"href="">Valantine's Day</a>
-
-
-
-        </div>
-        <div class= "col-md-3">
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><b>Congrats/Goodluck</b></a>
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item"href="">All Congratulations</a>
-          <a class="dropdown-item"href="">Good Luck</a>
-          <a class="dropdown-item"href="">Graduation</a>
-          <a class="dropdown-item"href="">New Job</a>
-          <a class="dropdown-item"href="">Retirement</a>
-
-
-
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><b>Baby</b></a>
-          <div class="dropdown-divider"></div>
-
-
-          <a class="dropdown-item"href="">Announcement</a>
-          <a class="dropdown-item"href="">Baby Shower</a>
-          <a class="dropdown-item"href="">New Baby</a>
-          <a class="dropdown-item"href="">Pregnancy</a>
-        </div>
-        <div class= "col-md-2">
-        <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><b>Baby</b></a>
-          <div class="dropdown-divider"></div>
-
-
-          <a class="dropdown-item"href="">Announcement</a>
-          <a class="dropdown-item"href="">Baby Shower</a>
-          <a class="dropdown-item"href="">New Baby</a>
-          <a class="dropdown-item"href="">Pregnancy</a>
-
-
-
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><b>Baby</b></a>
-            <div class="dropdown-divider"></div>
-
-
-            <a class="dropdown-item"href="">Announcement</a>
-            <a class="dropdown-item"href="">Baby Shower</a>
-            <a class="dropdown-item"href="">New Baby</a>
-            <a class="dropdown-item"href="">Pregnancy</a>
-
-          </div>
-          <div class= "col-md-1">
-          <img src="/img/card.jpg" width="240px" height="400px"  alt="">
-
-          </div>
-
-          <!--Birthday Cards-->
-
-        <li class="nav-item dropdown">
-            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Birthday Cards
-            </a>
-            </a>
-            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
-              <div class="row">
-                <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Him</b></a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item"href="">Boyfriend</a>
-              <a class="dropdown-item"href="">Brother</a>
-              <a class="dropdown-item" href="">Dad</a>
-              <a class="dropdown-item" href="">Grandad</a>
-              <a class="dropdown-item" href="">Husband</a>
-              <a class="dropdown-item" href="">Son</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Her</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="">Daughter</a>
-              <a class="dropdown-item" href="">Girlfriend</a>
-              <a class="dropdown-item" href="">Granma</a>
-              <a class="dropdown-item" href="">Mum</a>
-              <a class="dropdown-item" href="">Sister</a>
-              <a class="dropdown-item" href="">Wife</a>
-          </div>
-
-          <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Kids</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item"  href="#">Boy</a>
-              <a class="dropdown-item" href="">Girl</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Age</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="">1st Birthday</a>
-              <a class="dropdown-item" href="">18th Birthday</a>
-              <a class="dropdown-item" href="">21st Birthday</a>
-              <a class="dropdown-item" href="">30th  Birthday</a>
-              <a class="dropdown-item" href="">40th Birthday</a>
-              <a class="dropdown-item" href="">50th Birthday</a>
-              <a class="dropdown-item" href="">60th Birthday</a>
-              <a class="dropdown-item" href="">65th Birthday</a>
-              <a class="dropdown-item" href="">70th Birthday</a>
-              <a class="dropdown-item" href="">80th Birthday</a>
-              <a class="dropdown-item" href="">All Ages</a>
-</div>
-
-          <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Styles</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="">Chocolate Cards</a>
-              <a class="dropdown-item" href="">Create Your Own</a>
-              <a class="dropdown-item" href="">Funny</a>
-              <a class="dropdown-item" href="">Non Photo</a>
-              <a class="dropdown-item" href="">Photo</a>
-              <a class="dropdown-item" href="">Photo Collage</a>
-              <a class="dropdown-item" href="">Rude</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Populars</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="">All Birthday</a>
-              <a class="dropdown-item" href="">Best Seller</a>
-              <a class="dropdown-item" href="">Friends</a>
-              <a class="dropdown-item" href="">New in</a>
-            </div>
-
-</div>
-
-                            <!--   Post Cards        -->
-
-            <li class="nav-item dropdown">
-            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Postcards
-            </a>
-            </a>
-
-            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
-              <div class="row">
-                <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>I'm Looking for</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">All Postcards</a>
-              <a class="dropdown-item" href="#">Birthday Postcards</a>
-              <a class="dropdown-item" href="#">Father's Day POstcards</a>
-              <a class="dropdown-item" href="#">General Black Postcards</a>
-              <a class="dropdown-item" href="#">New Baby Postcards</a>
-              <a class="dropdown-item" href="#">Wedding Postcards</a>
-              <a class="dropdown-item" href="#">Thank you Postcards</a>
-                </div>
-                <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Who is for?</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">From Couples</a>
-              <a class="dropdown-item" href="#">From Families</a>
-              <a class="dropdown-item" href="#">From Him</a>
-              <a class="dropdown-item" href="#">From Her</a>
-              <a class="dropdown-item" href="#">From Kids</a>
-           </div>
-           <div class= "col-md-3">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Postcards by Type</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">Non Photo Postcards</a>
-              <a class="dropdown-item" href="#">Photo Postcards</a>
-           </div>
-
-</div>
-
-                            <!-- Personalized Gifts -->
-
-         <li class="nav-item dropdown">
-            <a button class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Personalized Gifts
-            </a>
-            </a>
-
-            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
-              <div class="row">
-                <div class= "col-md-3">
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>I'm Looking For..</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">Alcohol</a>
-              <a class="dropdown-item" href="#">Aprons</a>
-              <a class="dropdown-item" href="#">Backpacks</a>
-              <a class="dropdown-item" href="#">Balloons</a>
-              <a class="dropdown-item" href="#">Books</a>
-              <a class="dropdown-item" href="#">Calanders</a>
-              <a class="dropdown-item" href="#">Canvas Prints</a>
-              <a class="dropdown-item" href="#">Coasters</a>
-                </div>
-                <div class= "col-md-3">
-              <a class="dropdown-item" href="#">Cushions</a>
-              <a class="dropdown-item" href="#">Diaries</a>
-              <a class="dropdown-item" href="#">Engraved Frames</a>
-              <a class="dropdown-item" href="#">Glassware</a>
-              <a class="dropdown-item" href="#">Keyrings</a>
-              <a class="dropdown-item" href="#">Mugs</a>
-              <a class="dropdown-item" href="#">Notebooks</a>
-              <a class="dropdown-item" href="#">Pens</a>
-              <a class="dropdown-item" href="#">Photo Blocks</a>
-            </div>  <div class= "col-md-3">
-              <a class="dropdown-item" href="#">Poster</a>
-              <a class="dropdown-item" href="#">Socks</a>
-              <a class="dropdown-item" href="#">T-shirts</a>
-              <a class="dropdown-item" href="#">Wall Art</a>
-              <a class="dropdown-item" href="#">Water Bottles</a>
-              <a class="dropdown-item" href="#">Wedding Stationary</a>
-            </div>
-            </div>
-          </li>
-
-
-
-
-          <li class="nav-item dropdown">
-            <a class="btn btn-light btn-lg dropdown-toggle" style = "background-color: #ff66d9;" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-             Flowers
-            </a>
-            </a>
-            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Occassions</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">Birthday</a>
-
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Themes</b></a>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item" href="#">Under $30</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><b>Type</b></a>
-              <div class="dropdown-divider"></div>
-
-
-              <a class="dropdown-item" href="#">Letterbox Flowers</a>
-
-            </div>
-          </li>
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0">
-          <div class="container">
-          <input class="form-control input" class="h-auto d-inline-block" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary btn-group-lg" type="submit">Search</button></div>
-        </form>
-
-       </div>
-      </div>
-    </nav>
-
+      
+
+  <ul class="list-unstyled list navbar-collapse">
+				<li style="margin-right: -150px; ">
+					<img class="img" src="/img/Logo.png">
+				</li>
+
+				<li style=" padding-top: 120px; margin-left: 30px;">
+
+
+					<div class="form-group has-search">
+						<span class=" form-control-feedback"></span>
+						<input type="text" class="form-control resize" placeholder="Search"
+							style="background-color: #f8f8f8 !important;">
+					</div>
+				</li>
+
+				<li style="padding-top: 120px; padding-left: 30px;">
+
+					<div class="whiteBackground">
+						<span class="fa fa-user" style="line-height: 40px; vertical-align: middle;"> </span>
+					</div>
+
+				</li>
+
+				<li class="nav-item dropdown" style="padding-top: 113px; padding-left: 0px;">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<b style="color:black">My Account</b>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Login</a>
+						<a class="dropdown-item" href="#">Sign Up</a>
+					</div>
+				</li>
+
+				<li style="padding-top: 120px; padding-left: 0px;">
+
+					<div class="whiteBackground">
+						<i class="fa-shopping-cart" style="line-height: 40px; vertical-align: middle;"> </i>
+					</div>
+
+				</li>
+
+				<li class="nav-item dropdown" style="padding-top: 120px; padding-left: 9px; text-align: center;">
+					<b> My Cart</b>
+
+				</li>
+
+				<li>
+
+					<div class="container-1" style="z-index: 2000;">
+						<nav class="navbar navbar-expand-sm navbar-light  new-nav" id="mainNav">
+							<div class="container " style="padding-left: 280px;">
+								<a class="navbar-brand js-scroll-trigger " href="#page-top"
+									style="color: #f06e9c;">Home</a>
+								<button class="navbar-toggler" type="button" data-toggle="collapse"
+									data-target="#secondNavbar" aria-controls="navbarResponsive" aria-expanded="false"
+									aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon" ;"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="secondNavbar">
+									<ul class="navbar-nav ml-auto">
+
+										<li class="nav-item dropdown position-static">
+											<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+												id="navbarDropdown" role="button">Cards</a>
+											<ul class="list-unstyled dropdown-menu megamenu">
+												<div class="row">
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Popular</h6>
+															<hr>
+															<li>
+																<a href="#">Anniversary</a>
+															</li>
+															<li>
+																<a href="#">Bestsellers</a>
+															</li>
+															<li>
+																<a href="#">Birthday Cards</a>
+															</li>
+															<li>
+																<a href="#">Engagements</a>
+															</li>
+															<li>
+																<a href="#">Giant Cards</a>
+															</li>
+															<li>
+																<a href="#">Leaving</a>
+															</li>
+															<li>
+																<a href="#">New in Cards</a>
+															</li>
+															<li>
+																<a href="#">Wedding</a>
+															</li>
+														</ul>
+													</li>
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Seasonal</h6>
+															<hr>
+															<li>
+																<a href="#">Christmas</a>
+															</li>
+															<li>
+																<a href="#">Easter</a>
+															</li>
+															<li>
+																<a href="#">Father's Day</a>
+															</li>
+															<li>
+																<a href="#">Mother's Day</a>
+															</li>
+															<li>
+																<a href="#">Valentine's Day</a>
+															</li>
+														</ul>
+													</li>
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Congrats/Goodluck</h6>
+															<hr>
+															<li>
+																<a href="#">All Congratulations</a>
+															</li>
+															<li>
+																<a href="#">Goodluck</a>
+															</li>
+															<li>
+																<a href="#">Graduation</a>
+															</li>
+															<li>
+																<a href="#">New Job</a>
+															</li>
+															<li>
+																<a href="#">Retirement</a>
+															</li>
+														</ul>
+													</li>
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Baby</h6>
+															<hr>
+															<li>
+																<a href="#">Announcement</a>
+															</li>
+															<li>
+																<a href="#">Baby Shower</a>
+															</li>
+															<li>
+																<a href="#">New Baby</a>
+															</li>
+															<li>
+																<a href="#">Pregnancy</a>
+															</li>
+
+														</ul>
+													</li>
+												</div>
+											</ul>
+										</li>
+
+										<li class="nav-item dropdown position-static">
+											<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+												id="navbarDropdown" role="button">Birthday Cards</a>
+											<ul class="list-unstyled dropdown-menu megamenu">
+												<div class="row">
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Age</h6>
+															<hr>
+															<li>
+																<a href="#">1st Birthday</a>
+															</li>
+															<li>
+																<a href="#">18th Birthday</a>
+															</li>
+															<li>
+																<a href="#">21st Birthday</a>
+															</li>
+															<li>
+																<a href="#">30th Birthday</a>
+															</li>
+															<li>
+																<a href="#">40th Birthday</a>
+															</li>
+															<li>
+																<a href="#">50th Birthday</a>
+															</li>
+															<li>
+																<a href="#">60th Birthday</a>
+															</li>
+															<li>
+																<a href="#">65th Birthday</a>
+															</li>
+															<li>
+																<a href="#">70th Birthday</a>
+															</li>
+															<li>
+																<a href="#">80th Birthday</a>
+															</li>
+															<li>
+																<a href="#">All Ages</a>
+															</li>
+
+
+
+														</ul>
+													</li>
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Styles</h6>
+															<hr>
+															<li>
+																<a href="#">Chocolate Cards</a>
+															</li>
+															<li>
+																<a href="#">Create Your Own</a>
+															</li>
+															<li>
+																<a href="#">Funny</a>
+															</li>
+															<li>
+																<a href="#">Non Photo</a>
+															</li>
+															<li>
+																<a href="#">Photo</a>
+															</li>
+															<li>
+																<a href="#">Photo Collage</a>
+															</li>
+															<li>
+																<a href="#">Rude</a>
+															</li>
+
+
+														</ul>
+													<li class="col-md-3 column">
+														<ul>
+															<h6 class="list-header">Populars</h6>
+															<hr>
+															<li>
+																<a href="#">All Birthday</a>
+															</li>
+															<li>
+																<a href="#">Best Seller</a>
+															</li>
+															<li>
+																<a href="#">Friends</a>
+															</li>
+															<li>
+																<a href="#">New In</a>
+															</li>
+
+
+														</ul>
+													</li>
+										</li>
+
+										<li class="col-md-3 column">
+											<ul>
+												<h6 class="list-header">Kids</h6>
+												<hr>
+												<li>
+													<a href="#">Boy</a>
+												</li>
+												<li>
+													<a href="#">&nbsp; &nbsp;
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+												</li>
+
+
+												<li>
+													<a href="#"></a>
+												</li>
+
+												<li>
+													<a href="#">Girl</a>
+												</li>
+											</ul>
+										</li>
+										<li class="col-md-3 column">
+											<ul>
+												<h6 class="list-header">Him</h6>
+												<hr>
+												<li>
+													<a href="#">Boyfriend</a>
+												</li>
+												<li>
+													<a href="#">Brother</a>
+												</li>
+												<li>
+													<a href="#">Dad</a>
+												</li>
+												<li>
+													<a href="#">Grandad</a>
+												</li>
+												<li>
+													<a href="#">Husband</a>
+												</li>
+												<li>
+													<a href="#">Son</a>
+												</li>
+
+											</ul>
+										</li>
+										<li class="col-md-3 column">
+											<ul>
+												<h6 class="list-header">Her</h6>
+												<hr>
+												<li>
+													<a href="#">Daughter</a>
+												</li>
+												<li>
+													<a href="#">Girlfriend</a>
+												</li>
+												<li>
+													<a href="#">Grandma</a>
+												</li>
+												<li>
+													<a href="#">Mum</a>
+												</li>
+												<li>
+													<a href="#">Sister</a>
+												</li>
+												<li>
+													<a href="#">Wife</a>
+												</li>
+											</ul>
+										</li>
+
+
+
+								</div>
+			</ul>
+			</li>
+
+			<li class="nav-item dropdown position-static">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown"
+					role="button">Postcards</a>
+				<ul class="list-unstyled dropdown-menu megamenu">
+					<div class="row">
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">I'm Looking For</h6>
+								<hr>
+								<li>
+									<a href="#">All Postcards</a>
+								</li>
+								<li>
+									<a href="#">Birthday Postcards</a>
+								</li>
+								<li>
+									<a href="#">Father's Day Postcards</a>
+								</li>
+								<li>
+									<a href="#">General Black Postcards</a>
+								</li>
+								<li>
+									<a href="#">New Baby Postcards</a>
+								</li>
+								<li>
+									<a href="#">Wedding Postcards</a>
+								</li>
+								<li>
+									<a href="#">Thank You Postcards</a>
+								</li>
+
+							</ul>
+						</li>
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">From Who?</h6>
+								<hr>
+								<li>
+									<a href="#">From Couples</a>
+								</li>
+								<li>
+									<a href="#">From Families</a>
+								</li>
+								<li>
+									<a href="#">From Him</a>
+								</li>
+								<li>
+									<a href="#">From Her</a>
+								</li>
+								<li>
+									<a href="#">From Kids</a>
+								</li>
+							</ul>
+						</li>
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">Postcards by Type</h6>
+								<hr>
+								<li>
+									<a href="#">Non Photo Postcards</a>
+								</li>
+								<li>
+									<a href="#">Photo Postcards</a>
+								</li>
+
+							</ul>
+						</li>
+
+					</div>
+				</ul>
+			</li>
+
+			<li class="nav-item dropdown position-static">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown"
+					role="button">Personalized Gifts</a>
+				<ul class="list-unstyled dropdown-menu megamenu">
+					<div class="row">
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">I'm Looking For</h6>
+								<hr>
+								<li>
+									<a href="#">Alcohol</a>
+								</li>
+								<li>
+									<a href="#"> &nbsp; &nbsp; </a>
+								</li>
+								<li>
+									<a href="#">Aprons</a>
+								</li>
+								<li>
+									<a href="#">Backpacks</a>
+								</li>
+								<li>
+									<a href="#">Balloons</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Books</a>
+								</li>
+								<li>
+									<a href="#"> &nbsp; &nbsp; </a>
+								</li>
+								<li>
+									<a href="#">Calendars</a>
+								</li>
+								<li>
+									<a href="#">Canvas Prints</a>
+								</li>
+								<li>
+									<a href="#">Coasters</a>
+								</li>
+
+							</ul>
+						</li>
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header"> &nbsp;</h6>
+								<hr>
+								<li>
+									<a href="#">Cushions</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+
+								<li>
+									<a href="#">Diaries</a>
+								</li>
+								<li>
+									<a href="#">Engraved Frames</a>
+								</li>
+								<li>
+									<a href="#">Glassware</a>
+								</li>
+								<li>
+									<a href="#">Keyrings</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Mugs</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Notebooks</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Pens</a>
+								</li>
+							</ul>
+						</li>
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">&nbsp;</h6>
+								<hr>
+								<li>
+									<a href="#">Posters</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Socks</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">T-Shirts</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#">Wall Art</a>
+								</li>
+								<li>
+									<a href="#">Water Bottles</a>
+								</li>
+								<li>
+									<a href="#">Wedding Stationary</a>
+								</li>
+
+							</ul>
+						</li>
+
+					</div>
+				</ul>
+			</li>
+
+			<li class="nav-item dropdown position-static">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown"
+					role="button">Flowers</a>
+				<ul class="list-unstyled dropdown-menu megamenu">
+					<div class="row">
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header">Occasions</h6>
+								<hr>
+								<li>
+									<a href="#">Birthday</a>
+								</li>
+								<li>
+									<a href="#">&nbsp; &nbsp;</a>
+								</li>
+								<li>
+									<a href="#"> Themes </a>
+								</li>
+								<li>
+									<a href="#">Under $30</a>
+								</li>
+
+
+							</ul>
+						</li>
+						<li class="col-md-3 column">
+							<ul>
+								<h6 class="list-header"> Type</h6>
+								<hr>
+								<li>
+									<a href="#">Letterbox Flowers</a>
+								</li>
+
+							</ul>
+						</li>
+
+					</div>
+				</ul>
+      </li>
+    </ul>
+		</div>
+		</div>
+		</nav>
+		</div>
+		</li>
+		</ul>
   </div>
+  <!-- Body -->
 
-
-</style>
-
-
-
-<div class="container">
+<div class="container-fluid">
 <h2 class="my-h2"> You Can Customize Your Card Here!</h2>
-<div class="tab"style="color: grey">Giant (A3)<br>$9.99</div>
-<div class="tab" style="color: grey">Large (A4)<br>$5.99</div>
-<div class="tab" style="color: grey">Standard (A5)<br>$2.29</div>
-<div class="tab" style="color: grey">Small (A6)<br>$1.99</div>
+<button class="tab" style="color: black" style="padding-bottom: 50px;">Giant (A3)<br>$9.99</button>
+<button class="tab" style="color: black">Large (A4)<br>$5.99</button>
+
 <div class="tab-long"><button type="button" class="btn btn-secondary btn-tab"><u>Sizes & Pricing</u></button>
 <div class="space"></div>
 <div class="space"></div>
 <div class="space"></div>
 <div class="space"></div>
-<h2 class="my-h2-inline" style="color: grey"><b>QTY:</b></h2>
+<h2 class="my-h2-inline" style="color: black"><b>QTY:</b></h2>
 <div class="space" style="color: grey" ></div>
-<input type="text" style="color: grey" class="input-tab"/>
+<input type="text" class="input-tab"/>
 <div class="space"></div>
 <div class="space"></div>
 <button onclick= "save()" type="button" class="btn btn-cont btn-lg btn-secondary">Continue</button>
 </div>
 <div class="card bg-light text-dark" >
-   <div class="card-body card1" style="color: #F7F7F7;">Upgrade your card:</div>
+   <div class="card-body card1" style="color: black;">Upgrade your card:</div>
  </div>
 
     <div class="col-sm-6 col ">
@@ -814,15 +1039,9 @@ img{
   </div>
     </div>
 
-
     <div class="col-sm-6">
-
-
       <div class="card-front" id="card"> Card Front<hr>
-    
-    
-    
-    </div>
+     </div>
   
   
       <div class="btn-group">
@@ -870,6 +1089,164 @@ img{
   </div>
 
 
+  <footer class="page-footer font-small " style="background-color: #f8f8f8;">
+
+<!-- Footer Links -->
+<div class="container text-center ">
+
+  <!-- Grid row -->
+  <div class="row">
+
+	<!-- Grid column -->
+	<div class="col-md-2 text-md-left" style="margin-left:-85px">
+
+	  <!-- Links -->
+	  <h3 class="font-weight-bold mt-3 mb-4" id="custom-heading">Your Region</h3>
+
+	  <ul class="list-unstyled">
+		<li>
+		  <a href="#!" id="country">UK</a>
+		</li>
+		<li>
+		  <a href="#!" id="country">USA</a>
+		</li>
+		<li>
+		  <a href="#!" id="country">CANADA</a>
+		</li>
+		
+	  </ul>
+
+	</div>
+	<!-- Grid column -->
+
+	<hr class="clearfix w-100 d-md-none">
+
+	<!-- Grid column -->
+	<div class="col-md-2 mx-auto text-md-left">
+
+	  <!-- Links -->
+	  <h3 class="font-weight-bold mt-3 mb-4" id="custom-heading">Helpful Links</h3>
+
+	  <ul class="list-unstyled">
+		<li >
+		  <a href="#!" id="link">FAQ</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Sign In</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Create an Account</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Prepay</a>
+		</li>
+		 <li>
+		  <a href="#!" id="link">Customer Services</a>
+		</li>
+	  </ul>
+
+	</div>
+	<!-- Grid column -->
+
+	<hr class="clearfix w-100 d-md-none">
+
+	<!-- Grid column -->
+	<div class="col-md-2 mx-auto text-md-left">
+
+	  <!-- Links -->
+	  <h3 class="font-weight-bold mt-3 mb-4 text-md-left" id="custom-heading">About Us</h3>
+
+	  <ul class="list-unstyled">
+		<li class="text-sm-md-lg-xl-left">
+		  <a href="#!" id="link">Contact Us</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Feedback</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Cookies</a>
+		</li>
+		<li>
+		  <a href="#!" id="link">Terms of Use</a>
+		</li>
+		 <li>
+		  <a href="#!" id="link">Privacy Notice</a>
+		</li>
+	  </ul>
+
+	</div>
+	<!-- Grid column -->
+
+	<hr class="clearfix w-100 d-md-none">
+
+	<!-- Grid column -->
+	<div class="col-md-2 mx-auto text text-md-left">
+
+	  <!-- Links -->
+	  <h3 class="font-weight-bold  mt-3 mb-4" id="custom-heading">Payment Methods</h3>
+
+	  <ul class="list-unstyled">
+		<div class="payment-imgs">
+	   <a href="#"> <img style="width: 60px !important; height: 50px !important;" src="img/visa.png" alt="visa-pay" /></a>
+		<a href="#"><img style="width: 60px !important; height: 50px !important;" src="img/mastercard.png" alt="mastercard" /></a>
+	  </div>
+	  <div class="payment-imgs">
+		<a href="#"><img style="width: 60px !important; height: 50px !important;" src="img/maestro.png" alt="maestro" /></a>
+		<a href="#"><img style="width: 60px !important; height: 50px !important;" src="img/ipay.png" alt="ipay" /></a>
+	  </div>
+	  </ul>
+
+
+
+	</div>
+	<!-- Grid column -->
+
+<!-- Grid column -->
+	<div class="col-md-2 text-md-left " style="margin-right: -85px;">
+
+	  <!-- Links -->
+	  <h3 class="font-weight-bold text-center mt-3 mb-4" id="custom-heading">Keep In Touch</h3>
+
+	 <!-- Social buttons -->
+<ul class="list-unstyled list-inline text-center">
+
+  
+
+  
+<ul class="social-icons social-icons-colored social-icons-circle m-t-50 " style="padding-inline-start: 20px;">
+
+
+  <li class="p-1"><a href="#" class="bg-facebook"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="#" class="bg-instagram"><i class="fab fa-instagram""></i></a></li>
+			
+	  <li class="p-1"><a href="#" class="bg-twitter"><i class="fab fa-twitter"></i></a></li>
+  <li><a href="#" class="bg-youtube"><i class="fab fa-youtube"></i></a></li>
+						  
+						  
+</ul>
+</div>
+ 
+</ul>
+<!-- Social buttons -->
+
+	  
+
+	</div>
+	<!-- Grid column -->
+
+
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+
+
+</footer> 
+
+
+
   </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -883,7 +1260,7 @@ img{
   document.getElementById("uploadBtn").onchange = function () {
     document.getElementById("uploadFile").value = this.value;
   };
-
+ 
   </script>
 
 
@@ -897,8 +1274,8 @@ function cardF() {
 
 function cardIR() {
   document.getElementById("card").innerHTML = "Card Inside Right<hr> <br>" + 
-  "<button onclick='text3way1()' id='close-image'><img src='/img/3waytext.png'></button>" +
-"<button onclick='text1way1()'id='close-image'><img src='/img/1waytext.png'></button>";
+  "<button onclick='text3way1()' id='close-image'><img src='/img/3waytext.png' style='width:80px; height:80px;'></button>" +
+"<button onclick='text1way1()'id='close-image'><img src='/img/1waytext.png' style='width:80px; height:80px;'></button>";
 }
 function text1way1(){
   document.getElementById("photo").innerHTML = "<button id='edit' class='btn btn-primary' onclick='edit1()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save1()' type='button'>Save</button><div class='click2edit'>Add Your text here</div>";
@@ -922,8 +1299,8 @@ function text3way2(){
 
 function cardIL() {
   document.getElementById("card").innerHTML = "Card Inside Left<hr> <br>" + 
-  "<button onclick='text3way2()' id='close-image'><img src='/img/3waytext.png'></button>" +
-"<button onclick='text1way2()'id='close-image'><img src='/img/1waytext.png'></button>";
+  "<button onclick='text3way2()' id='close-image'><img src='/img/3waytext.png' style='width:80px; height:80px;'></button>" +
+"<button onclick='text1way2()'id='close-image'><img src='/img/1waytext.png' style='width:80px; height:80px;'></button>";
 
 }
 function cardB() {
