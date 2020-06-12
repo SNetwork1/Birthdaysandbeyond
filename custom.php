@@ -19,13 +19,11 @@
     // Get text
   	  	// image file directory
   	$target = "images/".basename($image);
-    $db = mysqli_connect("localhost", "root", "", "images");
+    $db = mysqli_connect("localhost", "root", "", "accounts");
    
     // $text = $post(‘upload.php’, { markup });
 
-
-    
-  	$sql = "INSERT INTO images (image) VALUES ('$image')";
+ 	$sql = "INSERT INTO images (image) VALUES ('$image')";
   	// execute query
   	mysqli_query($db, $sql);
 
@@ -1196,8 +1194,6 @@ img{
 	  </div>
 	  </ul>
 
-
-
 	</div>
 	<!-- Grid column -->
 
@@ -1209,9 +1205,6 @@ img{
 
 	 <!-- Social buttons -->
 <ul class="list-unstyled list-inline text-center">
-
-  
-
   
 <ul class="social-icons social-icons-colored social-icons-circle m-t-50 " style="padding-inline-start: 20px;">
 
@@ -1228,9 +1221,6 @@ img{
  
 </ul>
 <!-- Social buttons -->
-
-	  
-
 	</div>
 	<!-- Grid column -->
 
@@ -1240,8 +1230,6 @@ img{
 
 </div>
 <!-- Footer Links -->
-
-
 
 </footer> 
 

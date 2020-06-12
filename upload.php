@@ -1,20 +1,31 @@
 <?php
-if(isset($_POST['submit'])){
-  $db = mysqli_connect("localhost", "root", "", "uploads");
-  $image = $_FILES['file']['name'];
-  // Get text
-      // image file directory
-  $target = "images/".basename($image);
+include("config.php");
 
-  $sql = "INSERT INTO images (image) VALUES ('$image')";
-  // execute query
-  mysqli_query($db, $sql);
+if(isset($_POST['upload.php'])){
+ 
+  $name = $_FILES['file']['image'];
+  $target_dir = "images/";
+  $target_file = $target_dir . basename($_FILES["file"]["name"]);
 
-  move_uploaded_file($_FILES['file']['tmp_name'], $target);
+  // Select file type
+  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
- $target = "images/".basename($image);
+  // Valid file extensions
+  $extensions_arr = array("jpg","jpeg","png","gif");
 
-$result = mysqli_query($db, "SELECT * FROM images");
+  // Check extension
+  if( in_array($imageFileType,$extensions_arr) ){
+ 
+     // Insert record
+     $query = "insert into accounts values($name)";
+     mysqli_query($con,$query);
+  
+     // Upload file
+     move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+
+  }
+ 
+}
 ?>
 
 <!doctype html>
@@ -125,7 +136,7 @@ span:hover + div {
 
 .tab {
   overflow: hidden;
-  border: 2px solid #e8e6eb;
+  border: 2px solid grey;
   background-color:white;
   display: inline-block;
   padding: 1rem;
@@ -141,7 +152,7 @@ span:hover + div {
   overflow: hidden;
   border: 2px solid #e8e6eb;
   background-color:white;
-  display: inline-block;
+  
   padding: 0.3rem;
   text-align: center;
   font-size: 2rem;
@@ -332,11 +343,9 @@ img{
 </nav>
 <div class="container">
   <h2 class="my-h2"> You Can Customize Your Card Here!</h2>
-  <div class="tab">
-Giant (A3)<br>$9.99</div>
-<div class="tab">Large (A4)<br>$5.99</div>
-<div class="tab">Standard (A5)<br>$2.29</div>
-<div class="tab">Small (A6)<br>$1.99</div>
+  <button class="tab">Giant (A3)<br>$9.99</button>
+  <button class="tab">Large (A4)<br>$5.99</button>
+
 <div class="tab-long"><button type="button" class="btn btn-secondary btn-tab"><u>Sizes & Pricing</u></button>
 <div class="space"></div>
 <div class="space"></div>
@@ -354,51 +363,28 @@ Giant (A3)<br>$9.99</div>
  </div>
 
     <div class="col-sm-6 col ">
-      <div class="tab">Card Front</div>
-      <div class="tab">Inside Right</div>
-      <div class="tab">Inside Left</div>
-      <div class="tab">Card Back</div>
+    <button onclick="cardF()" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Card Front</button>
+    <button onclick="cardIL()" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Inside Left</button>
+    <button onclick="cardIR()" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Inside Right</button>
+    <button onclick="cardB()" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Card Back</button>
+   
+<div class="photo" id="photo">
+<?php
+$sql = "select image from images where id=1";
+$result = mysqli_query($con,$sql);
+$row = mysqli_fetch_array($result);
+$image = ['image'];
+$image_src = "images/".$image;
+?>
 
-       <div class="photo">
-         <?php
-
-         if(isset($_POST['submit'])){
-
-           $image = $_FILES['file']['name'];
-           // Get text
-               // image file directory
-           $target = "images/".basename($image);
-
-           $sql = "INSERT INTO images (image) VALUES ('$image')";
-           // execute query
-           mysqli_query($db, $sql);
-
-           move_uploaded_file($_FILES['file']['tmp_name'], $target);
-
-          $target = "images/".basename($image);
-         $db = mysqli_connect("localhost", "root", "", "uploads");
-         $result = mysqli_query($db, "SELECT * FROM images ORDER BY id DESC");
-         while ($row = mysqli_fetch_assoc($result)){
-           $imageURL = 'images/'.$row['image'];
-           ?>
-
-        <img src="<?php echo $imageURL;?>"/>
-  <?php
-  }
-    }
-  }
-    ?>
+<img src='<?php echo $image_src;?>' >
   </div>
     </div>
-
-
-    <div class="col-sm-6 col">
-      <div class="card-front">Card Front:<hr>
-        <div class="card1">
-
+    <div class="col-sm-6">
+      <div class="card-front" id="card"> Card Front<hr>
      </div>
+       </div>
   </div>
-</div>
 <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -412,6 +398,7 @@ Giant (A3)<br>$9.99</div>
         <div class="modal-body">
           <div class="container">
             <div class="row">
+              
               <div class="form-upload">
           <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
           <div class="fileUpload btn btn-primary">
@@ -437,13 +424,102 @@ Giant (A3)<br>$9.99</div>
     </div>
   </div>
 
-
-
-  </body>
-
+</body>
   <script>
   document.getElementById("uploadBtn").onchange = function () {
     document.getElementById("uploadFile").value = this.value;
   };
   </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/69b29b2f79.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="/js/dropdown.js"></script>
+
+
+<script>
+function cardF() {
+  document.getElementById("card").innerHTML = "Card Front<hr>";
+  document.getElementById("photo").innerHTML = " "
+
+}
+
+function cardIR() {
+  document.getElementById("card").innerHTML = "Card Inside Right<hr> <br>" + 
+  "<button onclick='text3way1()' id='close-image'><img src='/img/3waytext.png' style='width:80px; height:80px;'></button>" +
+"<button onclick='text1way1()'id='close-image'><img src='/img/1waytext.png' style='width:80px; height:80px;'></button>";
+}
+function text1way1(){
+  document.getElementById("photo").innerHTML = "<button id='edit' class='btn btn-primary' onclick='edit1()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save1()' type='button'>Save</button><div class='click2edit'>Add Your text here</div>";
+}
+
+function text3way1(){
+  document.getElementById("photo").innerHTML = "<button id='edit' class='btn btn-primary' onclick='edit1()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save1()' type='button'>Save</button><div class='click2edit'>Add Your text here</div>"
+ + "<button id='edit' class='btn btn-primary' onclick='edit1()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save1()' type='button'>Save</button><div class='click3edit'>Add Your text here</div>"
+  +"<button id='edit' class='btn btn-primary' onclick='edit1()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save1()' type='button'>Save</button><div class='click4edit'>Add Your text here</div>";
+}
+
+function text1way2(){
+  document.getElementById("photo").innerHTML = "<button id='edit' class='btn btn-primary' onclick='edit2()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save2()' type='button'>Save</button><div class='click2edit'>Add Your text here</div>";
+}
+
+function text3way2(){
+  document.getElementById("photo").innerHTML = "<button id='edit' class='btn btn-primary' onclick='edit2()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save2()' type='button'>Save</button><div class='click2edit'>Add Your text here</div>"
+ + "<button id='edit' class='btn btn-primary' onclick='edit2()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save2()' type='button'>Save</button><div class='click3edit'>Add Your text here</div>"
+  +"<button id='edit' class='btn btn-primary' onclick='edit2()' type='button'>Edit</button><button id='save' class='btn btn-primary' onclick='save2()' type='button'>Save</button><div class='click4edit'>Add Your text here</div>";
+}
+
+function cardIL() {
+  document.getElementById("card").innerHTML = "Card Inside Left<hr> <br>" + 
+  "<button onclick='text3way2()' id='close-image'><img src='/img/3waytext.png' style='width:80px; height:80px;'></button>" +
+"<button onclick='text1way2()'id='close-image'><img src='/img/1waytext.png' style='width:80px; height:80px;'></button>";
+
+}
+function cardB() {
+  document.getElementById("card").innerHTML = "Card Back <hr>";
+  document.getElementById("photo").innerHTML = "<img src='/img/logo1.jpg' style = font size: 2px;></img>"
+} 
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+<script>
+
+ var edit1 = function() {
+  $('.click2edit').summernote({focus: true});
+  $('.click3edit').summernote({focus: true});
+  $('.click4edit').summernote({focus: true});
+};
+
+var save1 = function() {
+  var markup1 = $('.click2edit').summernote('code');
+  $('.click2edit').summernote('destroy');
+  var markup2 = $('.click3edit').summernote('code');
+  $('.click3edit').summernote('destroy');
+  var markup3 = $('.click4edit').summernote('code');
+  $('.click4edit').summernote('destroy');
+};
+
+var edit2 = function() {
+  $('.click2edit').summernote({focus: true});
+  $('.click3edit').summernote({focus: true});
+  $('.click4edit').summernote({focus: true});
+};
+
+var save2 = function() {
+  var markup21 = $('.click2edit').summernote('code');
+  $('.click2edit').summernote('destroy');
+  var markup22 = $('.click3edit').summernote('code');
+  $('.click3edit').summernote('destroy');
+  var markup23 = $('.click4edit').summernote('code');
+  $('.click4edit').summernote('destroy');
+};
+
+ </script>
+
+
 </html>
